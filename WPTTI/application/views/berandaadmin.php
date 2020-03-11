@@ -11,7 +11,7 @@
         <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>WEBSITE TOEFL ITERA</h1>
         <ul>
-          <li><a href="#">Login</a></li>
+          <li><a href="#">Logout</a></li>
           <li><a href="#">Kontak</a></li>
           <li><a href="#">Alur</a></li>
           <li><a href="#">Beranda</a></li>

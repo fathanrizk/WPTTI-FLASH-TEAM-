@@ -8,6 +8,7 @@
   <body>
     <header>
       <div class="nav">
+        <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>WEBSITE TOEFL ITERA</h1>
         <ul>
           <!-- <li><a href="#">Login</a></li>
