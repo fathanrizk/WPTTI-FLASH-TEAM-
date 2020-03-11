@@ -27,12 +27,12 @@
             <input type="text" name="" placeholder="Username"><br>
         </div>
         <div class="data">
-            <img src="<?php echo base_url() ?>/assets/img/nim.png" alt="">
-            <input type="text" name="" placeholder="NIM"><br>
-        </div>
-        <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/password.png" alt="">
             <input type="password" name="" placeholder="Password"><br>
+        </div>
+        <div class="data">
+            <img src="<?php echo base_url() ?>/assets/img/nim.png" alt="">
+            <input type="text" name="" placeholder="NIM"><br>
         </div>
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/email.png" alt="">

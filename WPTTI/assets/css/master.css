@@ -3,8 +3,7 @@
 }
 .nav ul{
   margin: auto;
-  background: black;
-  opacity: 0.8;
+  background: #bfa045;
   overflow: hidden;
 }
 .nav ul li{
@@ -22,7 +21,7 @@
   position:relative;
 }
 .nav ul li a:hover{
-  background-color: #0487c0;
+  background-color: #000;
   color: white;
 }
 h1{
