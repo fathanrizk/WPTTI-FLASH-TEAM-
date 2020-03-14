@@ -18,5 +18,9 @@
         </ul>
       </div>
     </header>
+    <div class="main">
+      <h2><center>Kontak Kami</center></h2>
+
+    </div>
   </body>
 </html>

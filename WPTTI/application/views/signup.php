@@ -8,6 +8,7 @@
   <body>
     <header>
       <div class="nav">
+        <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>WEBSITE TOEFL ITERA</h1>
         <ul>
           <!-- <li><a href="#">Login</a></li>
@@ -27,12 +28,12 @@
             <input type="text" name="" placeholder="Username"><br>
         </div>
         <div class="data">
-            <img src="<?php echo base_url() ?>/assets/img/nim.png" alt="">
-            <input type="text" name="" placeholder="NIM"><br>
-        </div>
-        <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/password.png" alt="">
             <input type="password" name="" placeholder="Password"><br>
+        </div>
+        <div class="data">
+            <img src="<?php echo base_url() ?>/assets/img/nim.png" alt="">
+            <input type="text" name="" placeholder="NIM"><br>
         </div>
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/email.png" alt="">
