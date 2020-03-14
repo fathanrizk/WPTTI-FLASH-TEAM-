@@ -3,13 +3,13 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/master.css" type="text/css">
-    <title>Website Pendaftaran Test TOEFL ITERA</title>
+    <title>TOEFL | Intitut Teknologi Sumatera</title>
   </head>
   <body>
     <header>
       <div class="nav">
         <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
-        <h1>WEBSITE TOEFL ITERA</h1>
+        <h1>TOEFL ITERA</h1>
         <ul>
           <!-- <li><a href="#">Login</a></li>
           <li><a href="#">Helpdesk</a></li>
