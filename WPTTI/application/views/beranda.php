@@ -12,9 +12,11 @@
       <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>TOEFL ITERA</h1>
         <ul>
-          <li><a href="#" style="padding-right: 0.5rem;">Login</a></li>
-          <li><a href="#" style="padding-right: 0.5rem;">Informasi Kontak</a></li>
-          <li><a href="#" style="padding-right: 0.5rem;">Beranda</a></li>
+          <li>
+            <a href="<?= base_url('index.php/login');?>" style="padding-right: 0.5rem;">Login</a></li>
+          <li>
+            <a href="<?= base_url('index.php/kontak');?>" style="padding-right: 0.5rem;">Informasi Kontak</a></li>
+          <li><a href="<?= base_url('index.php/beranda');?>" style="padding-right: 0.5rem;">Beranda</a></li>
         </ul>
       </div>
       <div class="main">
