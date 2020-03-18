@@ -26,8 +26,16 @@
       </div>
     </header>
     <div class="main">
-      <h2><center>Score TOEFL</center></h2>
-
+      <h2><center style="padding-bottom: 1.5rem;padding-top: 2rem">Score Test TOEFL</center></h2>
+      <p style="padding-left: 3rem;padding-top: 2rem;padding-bottom: 1.5rem;">
+          Nama                  : <br>
+          Place, Date of Birth  : <br>
+          Registration Number   : <br>
+          NIM                   : <br>
+          Major ( if any )      : <br>
+          Numbered of Test      : <br>
+          Test Score            : <br>
+      </p>
     </div>
   </body>
 </html>
