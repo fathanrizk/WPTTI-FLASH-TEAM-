@@ -13,7 +13,7 @@
         <h1>TOEFL ITERA</h1>
         <ul>
           <li>
-            <a href="#" style="padding-right: 0.5rem;">Logout</a></li>
+            <a href="<?php echo site_url('index.php/userberanda/logout')?>" style="padding-right: 0.5rem;">Logout</a></li>
           <li>
             <a href="<?= base_url('index.php/userkontak');?>" style="padding-right: 0.5rem;">Informasi Kontak</a></li>
           <li>
