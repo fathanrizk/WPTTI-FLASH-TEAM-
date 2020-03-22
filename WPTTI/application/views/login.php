@@ -32,7 +32,7 @@
             <input type="password" name="password" placeholder="Password"><br>
         </div>
         <div style="color: red;font-family:'Open Sans',sans-serif;font-size: 13px;">
-          <?php 
+          <?php
             $info = $this->session->flashdata('info');
             if (!empty($info)){
               echo $info;
