@@ -31,7 +31,11 @@
           listening and reading skills.
         </p>
       </center>
-      <button type="button" class="btn btn-lg btn-primary" style="margin-left:auto; margin-right:auto; display: block;">Daftar Test</button>
+
+      <a
+      <button type="button" class="btn btn-lg btn-primary" href="<?= base_url('index.php/user daftartes');?>" style="margin-left:auto; margin-right:auto; display: block;">Daftar Test</button>
+      </a>
+
       <br>
       <img src="<?php echo base_url() ?>/assets/img/itera/2.jpg" alt="Los Angeles" style="width:38%;margin-left:auto; margin-right:auto; display: block;">
     </div>

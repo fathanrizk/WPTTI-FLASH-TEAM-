@@ -7,6 +7,8 @@ class Login extends CI_Controller {
 		$this->load->view('login');
 	}
 
+	//panggil fungsi cek login
+
 	public function ceklogin(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');

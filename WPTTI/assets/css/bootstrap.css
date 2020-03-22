@@ -146,6 +146,11 @@
   margin: 0 10px;
 }
 
+.register{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
