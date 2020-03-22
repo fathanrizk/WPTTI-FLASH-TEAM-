@@ -35,8 +35,9 @@
           </p>
         </center>
 
-        <a
-         <button type="button" class="btn btn-lg btn-primary " href="<?= base_url('index.php/login');?>" style="margin-left:auto; margin-right:auto; display: block;">Register Now !</button>
+        <a href="<?= base_url('index.php/login');?>">
+         <button type="button" class="btn btn-lg btn-primary " style="margin-left:auto; margin-right:auto; display: block;">Register Now !
+         </button>
         </a>
 
          <div id="myCarousel" class="carousel slide" data-ride="carousel" >
