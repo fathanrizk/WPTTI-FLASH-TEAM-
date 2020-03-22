@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Mar 2020 pada 17.47
+-- Waktu pembuatan: 22 Mar 2020 pada 05.20
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.9
 
@@ -45,7 +45,6 @@ CREATE TABLE `registrasi` (
 
 CREATE TABLE `user` (
   `id_user` int(20) NOT NULL,
-  `nama` varchar(30) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(20) NOT NULL,
   `nim` int(20) NOT NULL,
@@ -58,8 +57,8 @@ CREATE TABLE `user` (
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama`, `username`, `password`, `nim`, `email`, `kontak`, `level`) VALUES
-(1, '0', 'admin', 'admin', 0, '', 0, 2);
+INSERT INTO `user` (`id_user`, `username`, `password`, `nim`, `email`, `kontak`, `level`) VALUES
+(1, 'admin', 'admin', 0, '', 0, 2);
 
 --
 -- Indexes for dumped tables
@@ -91,7 +90,7 @@ ALTER TABLE `registrasi`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
