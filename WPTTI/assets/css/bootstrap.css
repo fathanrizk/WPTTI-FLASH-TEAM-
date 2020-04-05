@@ -139,13 +139,40 @@
 .data p{
   float: left;
 }
-.data input{
+.main form{
+  margin-top: 20px;
+  margin-left: 75%;
+}
+.main .pencarian{
+  width: 12.4rem;
+  height: 1.7rem;
   border: none;
+  border: 1px solid #bfa045;
   outline: none;
   background: none;
-  margin: 0 10px;
+  overflow: hidden;
+  padding-left: 5px;
+  font-size: 12px;
+  text-decoration: none;
 }
-
+.main .button{
+  margin: auto;
+  height: 1.7rem;
+  border: none;
+  border: 1px solid #bfa045;
+  overflow: hidden;
+  outline: none;
+  color: white;
+  width: 20%;
+  background-color: #bfa045;
+  cursor: pointer;
+  font-size: 12px;
+  padding-left: 5px;
+}
+.main .button:hover{
+  background-color: #0487c0;
+  color: white;
+}
 .register{
   margin-left: 20px;
   margin-right: 20px;
