@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class user_model extends CI_Model {
+
+	//fungsi daftar akun
 	public function register()
 	{
 		$data = array(
@@ -14,6 +16,21 @@ class user_model extends CI_Model {
 		);
 
 		return $this->db->insert('user', $data);
+	}
+
+	//fungsi daftar tes
+	public function daftartes()
+	{
+		$data2 = array(
+			'nama' => $this->input->post('nama'),
+			'ttl' => $this->input->post('ttl'),
+			'noreg' => $this->input->post('no_registrasi'),
+			'nim' => $this->input->post('nim'),
+			'prodi' => $this->input->post('prodi')
+		);
+
+		return $this->db->insert('registrasi', $data2);
+
 	}
 
 	//cek username exists

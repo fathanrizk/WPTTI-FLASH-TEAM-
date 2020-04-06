@@ -32,24 +32,25 @@
           <form class="datadaftar" action="index.html" method="post">
             <div class="data">
                 <p>Name :</p>
-                <input type="text" name=""><br>
+                <input type="text" name="nama"><br>
             </div>
             <div class="data">
               <p>Place & Date of Birth :</p>
-              <input type="text" name=""><br>
+              <input type="text" name="ttl"><br>
             </div>
             <div class="data">
                 <p>Registration Number : </p>
-                <input type="text" name=""><br>
+                <input type="text" name="noreg"><br>
             </div>
             <div class="data">
                 <p>NIM : </p>
-                <input type="text" name=""><br>
+                <input type="text" name="nim"><br>
             </div>
             <div class="data">
                 <p>Major (Optional) : </p>
-                <input type="text" name=""><br>
+                <input type="text" name="prodi"><br>
             </div>
+            <input class="button" type="submit" name="" value="Sign Up">
           </form>
       </div>
     </div>
