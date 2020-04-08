@@ -21,15 +21,15 @@ class user_model extends CI_Model {
 	//fungsi daftar tes
 	public function daftartes()
 	{
-		$data2 = array(
+		$data = array(
 			'nama' => $this->input->post('nama'),
 			'ttl' => $this->input->post('ttl'),
-			'noreg' => $this->input->post('no_registrasi'),
+			'no_registrasi' => $this->input->post('noreg'),
 			'nim' => $this->input->post('nim'),
 			'prodi' => $this->input->post('prodi')
 		);
 
-		return $this->db->insert('registrasi', $data2);
+		return $this->db->insert('registrasi', $data);
 
 	}
 

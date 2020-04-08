@@ -11,9 +11,17 @@ class Model_login extends CI_Model {
 			foreach ($query->result() as $row) {
 				$sess = array ('username' =>$row->username, 'password' => $row->password);
 
+				//if($data['level']=="1"){
+				//redirect('index.php/adminberanda');
+			//}else{
+			//	redirect('index.php/userberanda');
+			//}
+
+			
+
 			}
 			$this->session->get_userdata($sess);
-			redirect('index.php/userberanda');
+
 		}
 		else{
 			$this->session->set_flashdata('info','Maaf Username dan password Anda Salah!
