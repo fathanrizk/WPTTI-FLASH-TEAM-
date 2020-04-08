@@ -1,10 +1,12 @@
 .nav{
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 54px;
+  padding-right: 47px;
+  padding-bottom: 20px;
 }
 .nav ul{
   margin: auto;
-  background: black;
-  opacity: 0.8;
+  background: #bfa045;
   overflow: hidden;
 }
 .nav ul li{
@@ -22,15 +24,18 @@
   position:relative;
 }
 .nav ul li a:hover{
-  background-color: #0487c0;
-  color: white;
+  color: #0487c0;
+}
+.nav img{
+  width: 40px;
+  float: left;
 }
 h1{
   float: left;
   font-family:'Open Sans',sans-serif;
   font-size: 40px;
-  margin-left: 40px;
-  margin-right: 150px;
+  margin-left: 30px;
+  margin-right: 350px;
   margin-top: auto;
   color: black;
   font-weight: lighter;
@@ -105,4 +110,41 @@ h1{
 .container2 .button:hover{
   background-color: #0487c0;
   color: white;
+}
+.main{
+  width:1240px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin:auto;
+  transform: translate(-50%,-50%);
+  border: 1px solid #eee;
+  box-shadow: 13px 12px 23px #eee;
+
+}
+h2,h3,h4,p{
+  font-family:'Open Sans',sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+}
+.main h2{
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #bfa045;
+}
+.alamat h3{
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 70%;
+  border-bottom: 3px solid #bfa045;
+}
+.alamat h4{
+  font-size: 14px;
+  margin-left: 30px;
+}
+.alamat p{
+  margin-left: 30px;
+  font-size: 12px;
 }
