@@ -42,8 +42,8 @@
         <input class="button" type="submit" name="" value="Login">
         <br>
         <br>
-        <p>Jika anda belum memiliki akun, silahkan</p><a href="<?php echo base_url() ?>/application/views/signup.php"></a>
-        <a href="<?= base_url('index.php/signup');?>">daftar disini</a>
+        <p>If you don't have an account, please</p><a href="<?php echo base_url() ?>/application/views/signup.php"></a>
+        <a href="<?= base_url('index.php/signup');?>">register here.</a>
       </form>
     </div>
   </body>
