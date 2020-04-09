@@ -15,13 +15,13 @@
           <li>
             <a href="<?php echo base_url(); ?>index.php/login" style="padding-right: 0.5rem;">Login</a></li>
           <li>
-            <a href="<?= base_url('index.php/kontak');?>" style="padding-right: 0.5rem;">Informasi Kontak</a></li>
-          <li><a href="<?= base_url('index.php/beranda');?>" style="padding-right: 0.5rem;">Beranda</a></li>
+            <a href="<?= base_url('index.php/kontak');?>" style="padding-right: 0.5rem;">Contact Information</a></li>
+          <li><a href="<?= base_url('index.php/beranda');?>" style="padding-right: 0.5rem;">Homepage</a></li>
         </ul>
       </div>
       <div class="main">
-        <h2>Beranda Utama <br>
-           Pendaftaran Test TOEFL ITERA
+        <h2>Main Homepage<br>
+           ITERA TOEFL Test Registration
               <?php if($this->session->flashdata('user_registered')): ?>
                 <?php echo '<p class = "alert alert-success">' .$this->session->flashdata('user_registered').'</php>'; ?>
               <?php endif; ?>

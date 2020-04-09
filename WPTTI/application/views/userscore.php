@@ -13,15 +13,15 @@
           <ul>
             <li><a href="<?php echo site_url('index.php/userberanda/logout')?>" class = "logout" style="padding-right: 0.5rem;">Logout</a></li>
             <li>
-              <a href="<?= base_url('index.php/userkontak');?>" style="padding-right: 0.5rem;">Informasi Kontak</a></li>
+              <a href="<?= base_url('index.php/userkontak');?>" style="padding-right: 0.5rem;">Contact Information</a></li>
             <li>
               <a href="<?= base_url('index.php/userkontak');?>" style="padding-right: 0.5rem;">Score TOEFL</a></li>
             <li>
-              <a href="<?= base_url('index.php/userdaftartes');?>" style="padding-right: 0.5rem;">Daftar Test</a></li>
+              <a href="<?= base_url('index.php/userdaftartes');?>" style="padding-right: 0.5rem;">Test Registration</a></li>
             <li>
               <a href="<?= base_url('index.php/userprofile');?>" style="padding-right: 0.5rem;">Profile</a></li>
             <li>
-              <a href="<?= base_url('index.php/userberanda');?>" style="padding-right: 0.5rem;">Beranda</a></li>
+              <a href="<?= base_url('index.php/userberanda');?>" style="padding-right: 0.5rem;">Homepage</a></li>
           </ul>
       </div>
     </header>
