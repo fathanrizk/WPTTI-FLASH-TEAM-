@@ -29,7 +29,7 @@
       <h2>TOEFL Test Registration</h2>
       <div class="container">
         <p>Use your latest and valid data!</p>
-          <form class="datadaftar" action="index.html" method="post">
+          <form class="datadaftar" action="<?= base_url('index.php/userdaftartes')  ?>" method="post">
             <div class="data">
                 <p>Name :</p>
                 <input type="text" size ="25" name="nama"><br>
