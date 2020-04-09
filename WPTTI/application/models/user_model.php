@@ -33,6 +33,14 @@ class user_model extends CI_Model {
 
 	}
 
+	public function tampildata()
+	{
+      $query = $this->db->order_by('id_user','ASC')->get('registrasi');
+      return $query->result();
+  
+	}
+
+
 	//cek username exists
 	public function check_username_exists($username){
 		$query = $this->db->get_where('user', array('username' => $username));

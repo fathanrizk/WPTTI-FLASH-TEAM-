@@ -29,49 +29,32 @@
         <table style="max-width: 90%;" class="table table-hover table-bordered table-secondary">
           <thead style="background-color: #b49040; text-align: center;">
             <tr >
-              <th scope="col">No</th>
               <th scope="col">Name</th>
-              <th scope="col">NIM</th>
               <th scope="col">Place and Date Birth</th>
-              <th scope="col">Major Field Study</th>
               <th scope="col">Registration Number</th>
+              <th scope="col">NIM</th>
+              <th scope="col">Major Field Study</th>
               <th scope="col">Score</th>
               <th scope="col">Edit Data</th>
             </tr>
           </thead>
           <tbody style="text-align: center;">
-            <tr>
-              <th scope="row">1</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><a href="#">Edit</a></td>
-              
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><a href="#">Edit</a></td>
-              
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><a href="#">Edit</a></td>
-            </tr>
+            <?php 
+                $no = 1;
+                foreach ($data_user as $user) {
+                ?>
+                <tr>
+                  <td><?php echo $user->nama; ?></td>
+                  <td><?php echo $user->ttl; ?></td>
+                  <td><?php echo $user->no_registrasi; ?></td>
+                  <td><?php echo $user->nim; ?></td>
+                  <td><?php echo $user->prodi; ?></td>
+                  <td><?php echo $user->score; ?></td>
+
+
+                </tr>
+                <?php } ?>
+             
           </tbody>
         </table>
       </div>

@@ -2,10 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Adminberanda extends CI_Controller {
-	public function index()
+	public function __construct()
 	{
+		parent ::__construct ();
+		$this->load->model('user_model');
+	}
 
-		$this->load->view('adminberanda');
+
+	public function index()
+	{	
+
+		$data = array(
+			'data_user' => $this->user_model->tampildata()
+		);
+		$this->load->view('adminberanda',$data);
 	}
 
 	/*public function logout(){
