@@ -27,6 +27,7 @@
     </header>
     <div class="main">
       <h2><center style="padding-bottom: 1.5rem;padding-top: 2rem">Score Test TOEFL</center></h2>
+      <a class="btn btn-danger" href="<?= base_url('index.php/userscore')  ?>"><i class="fa fa-print"></i>Print</a>
       <p style="padding-left: 3rem;padding-top: 2rem;padding-bottom: 1.5rem;">
           Nama                  : <br>
           Place, Date of Birth  : <br>

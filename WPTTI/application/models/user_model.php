@@ -18,6 +18,10 @@ class user_model extends CI_Model {
 		return $this->db->insert('user', $data);
 	}
 
+	public function data_user(){
+		return $this->db->get('registrasi');
+	}
+
 	//fungsi daftar tes
 	public function daftartes()
 	{

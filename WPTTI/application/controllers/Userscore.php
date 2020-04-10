@@ -6,5 +6,10 @@ class Userscore extends CI_Controller {
 	{
 		$this->load->view('userscore');
 	}
+
+	public function print(){
+		//$data['toefl'] = $this->user_model->data_user('registrasi')->result();
+		$this->load->view('print_data');
+		}
 }
 ?>
