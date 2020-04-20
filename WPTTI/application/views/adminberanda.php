@@ -29,6 +29,7 @@
         <table style="max-width: 90%;" class="table table-hover table-bordered table-secondary">
           <thead style="background-color: #b49040; text-align: center;">
             <tr >
+              <th scope="col">No</th>
               <th scope="col">Name</th>
               <th scope="col">Place and Date Birth</th>
               <th scope="col">Registration Number</th>
@@ -39,22 +40,24 @@
             </tr>
           </thead>
           <tbody style="text-align: center;">
-            <?php 
+            <?php
                 $no = 1;
                 foreach ($data_user as $user) {
                 ?>
+                <?php  ?>
                 <tr>
+                  <td><?php echo $no; ?></td>
                   <td><?php echo $user->nama; ?></td>
                   <td><?php echo $user->ttl; ?></td>
                   <td><?php echo $user->no_registrasi; ?></td>
                   <td><?php echo $user->nim; ?></td>
                   <td><?php echo $user->prodi; ?></td>
                   <td><?php echo $user->score; ?></td>
-
-
+                  <td><a class="btn btn-danger" href="<?= base_url('index.php/adminedit');?>"><i class="fa fa-print"></i>Edit</a></td>
                 </tr>
+                <?php $no++; ?>
                 <?php } ?>
-             
+
           </tbody>
         </table>
       </div>
