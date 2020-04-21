@@ -34,16 +34,25 @@ class user_model extends CI_Model {
 		);
 
 		return $this->db->insert('registrasi', $data);
-
 	}
 
 	public function tampildata()
 	{
-      $query = $this->db->order_by('id_user','ASC')->get('registrasi');
-      return $query->result();
-  
+    $query = $this->db->order_by('id_user','ASC')->get('registrasi');
+    return $query->result();
 	}
 
+	//fungsi edit data register
+	public function editdata($where){
+		$query = $this->db->get_where('registrasi',$where);
+		return $query->result();
+	}
+
+	//fungsi edit data register 2
+	public function update($where, $data){
+		$this->db->get_where($where);
+		$this->db->update('registrasi',$data);
+	}
 
 	//cek username exists
 	public function check_username_exists($username){

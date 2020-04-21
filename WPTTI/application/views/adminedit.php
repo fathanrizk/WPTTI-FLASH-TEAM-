@@ -18,13 +18,10 @@
     </div>
     <div class="main">
       <h2>Registrant Account Information</h2>
-      <form action= "" method="get">
-        <input class="pencarian" type="text" name="keyword">
-        <input class="button" type="submit" name="" value="cari"><br><br>
-      </form>
       <br>
       <br>
       <!-- DISINI ISINYA LIST AKUN, FUNGSI HAPUS AKUN, INPUT SOCRE-->
+
       <div align="center" style="padding-bottom: 3rem; ">
         <table style="max-width: 90%;" class="table table-hover table-bordered table-secondary">
           <thead style="background-color: #b49040; text-align: center;">
@@ -40,6 +37,7 @@
             </tr>
           </thead>
           <tbody style="text-align: center;">
+            <?php echo form_open('Adminberanda/fungsiedit'); ?>
             <?php
                 $no = 1;
                 foreach ($data_user as $user) {
@@ -49,15 +47,15 @@
                   <td><?php echo $no; ?></td>
                   <td><?php echo $user->nama; ?></td>
                   <td><?php echo $user->ttl; ?></td>
-                  <td><?php echo $user->no_registrasi; ?></td>
+                  <td><input type="text" name="no_regis" value=""></td>
                   <td><?php echo $user->nim; ?></td>
                   <td><?php echo $user->prodi; ?></td>
-                  <td><?php echo $user->score; ?></td>
-                  <td><a class="btn btn-danger" href="<?= base_url().'index.php/Adminberanda/edit/'.$user->id_user;?>"><i class="fa fa-print"></i>Edit</a></td>
+                  <td><input type="text" name="score" value=""></td>
+                  <td><a class="btn btn-danger" href="<?= base_url('index.php/adminberanda')?>"><i class="fa fa-print" type="submit"></i>Simpan</a></td>
                 </tr>
                 <?php $no++; ?>
                 <?php } ?>
-
+            <?php echo form_close() ?>
           </tbody>
         </table>
       </div>

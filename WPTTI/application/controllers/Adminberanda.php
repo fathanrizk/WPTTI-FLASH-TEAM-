@@ -8,16 +8,26 @@ class Adminberanda extends CI_Controller {
 		$this->load->model('user_model');
 	}
 
-
-	public function index()
-	{	
-
-		$data = array(
-			'data_user' => $this->user_model->tampildata()
-		);
+	public function index(){
+		$data = array('data_user' => $this->user_model->tampildata());
 		$this->load->view('adminberanda',$data);
 	}
 
+	public function edit($id){
+		$where = array('id_user' => $id);
+		$data = array('data_user' => $this->user_model->editdata($where));
+		$this->load->view('adminedit',$data);
+	}
+
+	public function fungsiedit(){
+		$no_regis = $this->input->post['no_registrasi'];
+		$score = $this->input->post['score'];
+
+		$data = array('no_registrasi' => $no_regis, 'score' => $score);
+		$where = array('id_user' => $id);
+		
+		$this->user_model->update($where, $data);
+	}
 	/*public function logout(){
 		$this->session->set_userdata('username', FALSE);
 		$this->session->sess_destroy();
