@@ -49,9 +49,9 @@ class user_model extends CI_Model {
 	}
 
 	//fungsi edit data register 2
-	public function update($where, $data, $table){
-		$this->db->where($where);
-		$this->db->update($table, $data);
+	public function update($where, $data){
+		$this->db->get_where($where);
+		$this->db->update('registrasi',$data);
 	}
 
 	//cek username exists
@@ -71,6 +71,11 @@ class user_model extends CI_Model {
 		}else{
 			return false;
 		}
+	}
+
+	public function hapus($where,$table){
+		$this->db->where($where);
+		$this->db->delete($table);
 	}
 
 
