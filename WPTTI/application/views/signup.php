@@ -23,7 +23,7 @@
     <div class="container">
       <?php echo validation_errors(); ?>
       <h2><center>Sign Up</center></h2>
-      <form class="" action="<?= base_url('index.php/signup')  ?>" method="post">
+      <form class="" action="<?= base_url('signup')  ?>" method="post">
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/account.png" alt="">
             <input type="text" name="username" placeholder="Username"><br>

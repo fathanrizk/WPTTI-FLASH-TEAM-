@@ -12,8 +12,8 @@
       <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>TOEFL ITERA</h1>
         <ul>
-          <li><a href="<?= base_url('index.php/login');?> " style="padding-right: 0.5rem;">Logout</a></li>
-          <li><a href="<?= base_url('index.php/adminberanda');?> " style="padding-right: 0.5rem;">Homepage</a></li>
+          <li><a href="<?= base_url('login');?> " style="padding-right: 0.5rem;">Logout</a></li>
+          <li><a href="<?= base_url('adminberanda');?> " style="padding-right: 0.5rem;">Homepage</a></li>
         </ul>
     </div>
     <div class="main">
@@ -53,8 +53,8 @@
                   <td><?php echo $user->nim; ?></td>
                   <td><?php echo $user->prodi; ?></td>
                   <td><?php echo $user->score; ?></td>
-                  <td><a class="btn btn-danger" href="<?= base_url().'index.php/Adminberanda/edit/'.$user->id_user;?>"><i class="fa fa-print"></i>Edit</a></td>
-                  <td><a class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');" href="<?= base_url().'index.php/Adminberanda/hapus/'.$user->id_user;?>"><i class="fa fa-print"></i>Hapus</a></td>
+                  <td><a class="btn btn-danger" href="<?= base_url('adminberanda/edit/').$user->id_user;?>"><i class="fa fa-print"></i>Edit</a></td>
+                  <td><a class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');" href="<?= base_url('adminberanda/hapus/').$user->id_user;?>"><i class="fa fa-print"></i>Hapus</a></td>
                 </tr>
                 <?php $no++; ?>
                 <?php } ?>

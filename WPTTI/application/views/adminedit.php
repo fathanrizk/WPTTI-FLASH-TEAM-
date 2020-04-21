@@ -12,8 +12,8 @@
       <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>TOEFL ITERA</h1>
         <ul>
-          <li><a href="<?= base_url('index.php/login');?> " style="padding-right: 0.5rem;">Logout</a></li>
-          <li><a href="<?= base_url('index.php/adminberanda');?> " style="padding-right: 0.5rem;">Homepage</a></li>
+          <li><a href="<?= base_url('login');?> " style="padding-right: 0.5rem;">Logout</a></li>
+          <li><a href="<?= base_url('adminberanda');?> " style="padding-right: 0.5rem;">Homepage</a></li>
         </ul>
     </div>
     <div class="main">
@@ -37,7 +37,7 @@
             </tr>
           </thead>
           <tbody style="text-align: center;">
-            <?php echo form_open('index.php/Adminberanda/fungsiedit'); ?>
+            <?php echo form_open('adminberanda/fungsiedit'); ?>
             <?php foreach ($data_user as $user) {?>
                 <tr>
                   <td>1</td>

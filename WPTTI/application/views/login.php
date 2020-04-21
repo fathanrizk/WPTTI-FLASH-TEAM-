@@ -22,7 +22,7 @@
     <br>
     <div class="container2">
       <h2><center>Login</center></h2>
-      <form class="" action="<?php echo site_url('index.php/login/ceklogin')?>" method="post">
+      <form class="" action="<?php echo site_url('login/ceklogin')?>" method="post">
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/account.png" alt="">
             <input type="text" name="username" placeholder="Username atau Email"><br>
@@ -42,8 +42,8 @@
         <input class="button" type="submit" name="" value="Login">
         <br>
         <br>
-        <p>If you don't have an account, please</p><a href="<?php echo base_url() ?>/application/views/signup.php"></a>
-        <a href="<?= base_url('index.php/signup');?>">register here.</a>
+        <br>
+        <p>If you don't have an account, please <a href="<?= base_url('signup');?>">register here.</a></p>
       </form>
     </div>
   </body>

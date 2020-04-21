@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 	public function index()
-	{	
+	{
 		$this->load->view('login');
 	}
 
@@ -16,9 +16,9 @@ class Login extends CI_Controller {
 		$this->load->model('model_login');
 
 		if($username == "admin" && $password == "admin"){
-			redirect('index.php/adminberanda');
+			redirect('adminberanda');
 		}else{
-			redirect('index.php/userberanda');
+			redirect('userberanda');
 		}
 
 

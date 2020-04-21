@@ -28,14 +28,14 @@ class Adminberanda extends CI_Controller {
 		$where = array('id_user' => $id_user);
 
 		$this->user_model->update($where, $data, 'registrasi');
-		redirect('index.php/Adminberanda/index');
+		redirect('adminberanda');
 	}
 
 		public function hapus($id){
 
 		$where=array('id_user'=>$id);
 		$this->user_model->hapus($where,'registrasi');
-		redirect('index.php/adminberanda');
+		redirect('adminberanda');
 	}
 	/*public function logout(){
 		$this->session->set_userdata('username', FALSE);

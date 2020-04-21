@@ -19,14 +19,14 @@ class Userdaftartes extends CI_Controller {
         $data['ttl'] = $this->input->post['ttl'];
         $data['nim'] = $this->input->post['nim'];
         $data['prodi'] = $this->input->post['prodi'];
-       
+
 
         $this->load->model('user_model');
-  
+
         $this->user_model->daftartes($data);
 
-        redirect('index.php/userberanda');
-    }   
+        redirect('userberanda');
+    }
 }
 	}
 ?>

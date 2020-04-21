@@ -11,9 +11,9 @@
         <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
           <h1>TOEFL ITERA</h1>
           <ul>
-            <li><a href="<?= base_url('index.php/login');?>" style="padding-right: 0.5rem;">Login</a></li>
-            <li><a href="<?= base_url('index.php/kontak');?>" style="padding-right: 0.5rem;">Contact Information</a></li>
-            <li><a href="<?= base_url('index.php/beranda');?>" style="padding-right: 0.5rem;">Homepage</a></li>
+            <li><a href="<?= base_url('login');?>" style="padding-right: 0.5rem;">Login</a></li>
+            <li><a href="<?= base_url('kontak');?>" style="padding-right: 0.5rem;">Contact Information</a></li>
+            <li><a href="<?= base_url('beranda');?>" style="padding-right: 0.5rem;">Homepage</a></li>
           </ul>
       </div>
     </header>
