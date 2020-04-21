@@ -49,9 +49,9 @@ class user_model extends CI_Model {
 	}
 
 	//fungsi edit data register 2
-	public function update($where, $data){
-		$this->db->get_where($where);
-		$this->db->update('registrasi',$data);
+	public function update($where, $data, $table){
+		$this->db->where($where);
+		$this->db->update($table, $data);
 	}
 
 	//cek username exists

@@ -37,23 +37,19 @@
             </tr>
           </thead>
           <tbody style="text-align: center;">
-            <?php echo form_open('Adminberanda/fungsiedit'); ?>
-            <?php
-                $no = 1;
-                foreach ($data_user as $user) {
-                ?>
-                <?php  ?>
+            <?php echo form_open('index.php/Adminberanda/fungsiedit'); ?>
+            <?php foreach ($data_user as $user) {?>
                 <tr>
-                  <td><?php echo $no; ?></td>
+                  <td>1</td>
                   <td><?php echo $user->nama; ?></td>
                   <td><?php echo $user->ttl; ?></td>
-                  <td><input type="text" name="no_regis" value=""></td>
+                  <td><input type="text" name="no_registrasi" value="<?php echo $user->no_registrasi; ?>"></td>
                   <td><?php echo $user->nim; ?></td>
                   <td><?php echo $user->prodi; ?></td>
-                  <td><input type="text" name="score" value=""></td>
-                  <td><a class="btn btn-danger" href="<?= base_url('index.php/adminberanda')?>"><i class="fa fa-print" type="submit"></i>Simpan</a></td>
+                  <td><input type="text" name="score" value="<?= $user->score  ?>"></td>
+                  <input type="hidden" name="id_user" value="<?php echo $user->id_user; ?>">
+                  <td><input type="submit" name="" value="Simpan"></td> <!--<a class="btn btn-danger"><i class="fa fa-print" type="submit"></i>Simpan</a></td>-->
                 </tr>
-                <?php $no++; ?>
                 <?php } ?>
             <?php echo form_close() ?>
           </tbody>
