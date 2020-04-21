@@ -20,16 +20,18 @@ class Adminberanda extends CI_Controller {
 	}
 
 	public function fungsiedit(){
-		$no_regis = $this->input->post['no_registrasi'];
-		$score = $this->input->post['score'];
+		$id_user = $this->input->post('id_user');
+		$no_register = $this->input->post('no_registrasi');
+		$score = $this->input->post('score');
 
-		$data = array('no_registrasi' => $no_regis, 'score' => $score);
-		$where = array('id_user' => $id);
+		$data = array('no_registrasi' => $no_register, 'score' => $score);
+		$where = array('id_user' => $id_user);
 
-		$this->user_model->update($where, $data);
+		$this->user_model->update($where, $data, 'registrasi');
+		redirect('index.php/Adminberanda/index');
 	}
 
-	public function hapus($id){
+		public function hapus($id){
 
 		$where=array('id_user'=>$id);
 		$this->user_model->hapus($where,'registrasi');

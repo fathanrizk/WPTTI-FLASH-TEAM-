@@ -39,10 +39,6 @@
               <input type="text" size ="25" name="ttl"><br>
             </div>
             <div class="data">
-                <p>Registration Number : </p>
-                <input type="text" size ="25" name="noreg"><br>
-            </div>
-            <div class="data">
                 <p>NIM :                    </p>
                 <input type="text" size ="25" name="nim"><br>
             </div>

@@ -28,7 +28,6 @@ class user_model extends CI_Model {
 		$data = array(
 			'nama' => $this->input->post('nama'),
 			'ttl' => $this->input->post('ttl'),
-			'no_registrasi' => $this->input->post('noreg'),
 			'nim' => $this->input->post('nim'),
 			'prodi' => $this->input->post('prodi')
 		);
@@ -49,9 +48,9 @@ class user_model extends CI_Model {
 	}
 
 	//fungsi edit data register 2
-	public function update($where, $data){
-		$this->db->get_where($where);
-		$this->db->update('registrasi',$data);
+	public function update($where, $data, $table){
+		$this->db->where($where);
+		$this->db->update($table, $data);
 	}
 
 	//cek username exists
