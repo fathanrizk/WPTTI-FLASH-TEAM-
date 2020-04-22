@@ -22,7 +22,7 @@
         <input class="pencarian" type="text" name="keyword">
         <input class="button" type="submit" name="" value="cari"><br><br>
       </form>
-      <a class="btn btn-success" href="<?= base_url('adminberanda/eksport_excel')?>"> Eksport Excel</a>
+      <a class="btn btn-success" href="<?= base_url('adminberanda/eksport_excel')?>">Export Excel</a>
       <br>
       <br>
       <!-- DISINI ISINYA LIST AKUN, FUNGSI HAPUS AKUN, INPUT SOCRE-->

@@ -13,5 +13,13 @@ class Userberanda extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('beranda');
 	}
+
+	public function detail($id){
+		$this->load->model('user_model');
+		$detail = $this->user_model->detail_data($id);
+		$data['userprofile'] = $detail;
+		$this->load->view('userprofile', $data);
+
+	}
 }
 ?>

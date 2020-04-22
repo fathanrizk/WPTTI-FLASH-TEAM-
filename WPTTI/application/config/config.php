@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:/WPTTI-FLASH-TEAM-/WPTTI/';
+$config['base_url'] = 'http://localhost:8080/WPTTI-FLASH-TEAM-/WPTTI/';
 
 /*
 |--------------------------------------------------------------------------
