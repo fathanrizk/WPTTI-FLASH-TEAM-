@@ -24,8 +24,8 @@ class Model_login extends CI_Model {
 
 		}
 		else{
-			$this->session->set_flashdata('info','Maaf Username dan password Anda Salah!
-				Mohon Login Ulang.');
+			$this->session->set_flashdata('info','Sorry, Your Username and Password are incorrect !
+			 Please Try Again.');
 			redirect('index.php/login');
 		
 		}

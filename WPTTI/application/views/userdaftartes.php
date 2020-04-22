@@ -24,7 +24,7 @@
       <h2>TOEFL Test Registration</h2>
       <div class="container">
         <p>Use your latest and valid data!</p>
-          <form class="datadaftar" action="<?= base_url('userdaftartes')  ?>" method="post">
+         <?php echo form_open_multipart('userdaftartes'); ?>
             <div class="data">
                 <p>Name :</p>
                 <input type="text" size ="25" name="nama"><br>
@@ -41,8 +41,12 @@
                 <p>Major (Optional) : </p>
                 <input type="text" size ="25" name="prodi"><br>
             </div>
-            <input class="button" type="submit" name="" value="Sign Up">
-          </form>
+            <div class="data">
+                <p>Upload Photo : </p>
+                <input type="file" name="foto"><br>
+            </div>
+            <input class="button" type="submit" name="" value="Submit">
+          <?php echo form_close(); ?>
       </div>
     </div>
   </body>

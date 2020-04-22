@@ -13,6 +13,7 @@ class user_model extends CI_Model {
 			'email' => $this->input->post('email'),
 			'kontak' => $this->input->post('kontak')
 
+
 		);
 
 		return $this->db->insert('user', $data);
@@ -23,14 +24,9 @@ class user_model extends CI_Model {
 	}
 
 	//fungsi daftar tes
-	public function daftartes()
+	public function daftartes($data)
 	{
-		$data = array(
-			'nama' => $this->input->post('nama'),
-			'ttl' => $this->input->post('ttl'),
-			'nim' => $this->input->post('nim'),
-			'prodi' => $this->input->post('prodi')
-		);
+		
 
 		return $this->db->insert('registrasi', $data);
 	}

@@ -28,7 +28,7 @@
       <form class="" action="<?php echo site_url('login/ceklogin')?>" method="post">
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/account.png" alt="">
-            <input type="text" name="username" placeholder="Username atau Email"><br>
+            <input type="text" name="username" placeholder="Username or Email"><br>
         </div>
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/password.png" alt="">

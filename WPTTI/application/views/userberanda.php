@@ -33,7 +33,7 @@
       </center>
 
       <a href="<?= base_url('userdaftartes');?>">
-      <button type="button" class="btn btn-lg btn-primary" style="margin-left:auto; margin-right:auto; display: block;">Daftar Test
+      <button type="button" class="btn btn-lg btn-primary" style="margin-left:auto; margin-right:auto; display: block;">Register Now !
       </button>
       </a>
 
