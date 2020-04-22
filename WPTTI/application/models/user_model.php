@@ -31,6 +31,16 @@ class user_model extends CI_Model {
 		return $this->db->insert('registrasi', $data);
 	}
 
+	public function get_keyword($keyword){
+		$this->db->select('*');
+		$this->db->from('registrasi');
+		$this->db->like('nama',$keyword);
+		$this->db->or_like('nim',$keyword);
+		$this->db->or_like('ttl',$keyword);
+		$this->db->or_like('prodi',$keyword);
+		return $this->db->get()->result();
+	}
+
 	public function tampildata()
 	{
     $query = $this->db->order_by('id_user','ASC')->get('registrasi');

@@ -94,6 +94,12 @@ class Adminberanda extends CI_Controller {
 		exit;
 	}
 
+	public function search(){
+		$keyword = $this->input->post('keyword');
+		$data = array('data_user' => $this->user_model->get_keyword($keyword));
+		$this->load->view('adminberanda',$data);
+	}
+
 	/*public function logout(){
 		$this->session->set_userdata('username', FALSE);
 		$this->session->sess_destroy();

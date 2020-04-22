@@ -18,10 +18,10 @@
     </div>
     <div class="main">
       <h2>Registrant Account Information</h2>
-      <form action= "" method="get">
+      <?php echo form_open('Adminberanda/search') ?>
         <input class="pencarian" type="text" name="keyword">
         <input class="button" type="submit" name="" value="cari"><br><br>
-      </form>
+      <?php echo form_close() ?>
       <a class="btn btn-success" href="<?= base_url('adminberanda/eksport_excel')?>">Export Excel</a>
       <br>
       <br>
