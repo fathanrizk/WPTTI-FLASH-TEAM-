@@ -20,10 +20,6 @@
       <div class="main">
         <h2>Main Homepage<br>
            ITERA TOEFL Test Registration
-              <?php if($this->session->flashdata('user_registered')): ?>
-                <?php echo '<p class = "alert alert-success">' .$this->session->flashdata('user_registered').'</php>'; ?>
-              <?php endif; ?>
-
         </h2>
         <center>
           <p style="margin-left: 1rem; margin-top: 1rem; padding-bottom: 1rem;">

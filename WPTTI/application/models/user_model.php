@@ -41,15 +41,6 @@ class user_model extends CI_Model {
     return $query->result();
 	}
 
-	public function tampil_data(){
-		return $this->db->get('registrasi');
-	}
-
-	public function detail_data($id = NULL){
-		$query = $this->db->get_where('registrasi', array('id_user' => $id))->row();
-		return $query;
-	}
-
 	//fungsi edit data register
 	public function editdata($where){
 		$query = $this->db->get_where('registrasi',$where);
