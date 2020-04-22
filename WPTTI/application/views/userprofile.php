@@ -22,14 +22,7 @@
     </header>
     <div class="main">
       <h2><center>Your Profile</center></h2>
-      <br>
-      <div class="row">
-        <div class="col-lg-8">
 
-        </div>
-
-
-      </div>
     </div>
   </body>
 </html>

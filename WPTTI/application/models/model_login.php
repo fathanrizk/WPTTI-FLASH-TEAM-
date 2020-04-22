@@ -17,7 +17,7 @@ class Model_login extends CI_Model {
 			//	redirect('index.php/userberanda');
 			//}
 
-
+			
 
 			}
 			$this->session->get_userdata($sess);
@@ -26,8 +26,8 @@ class Model_login extends CI_Model {
 		else{
 			$this->session->set_flashdata('info','Maaf Username dan password Anda Salah!
 				Mohon Login Ulang.');
-			redirect('login');
-
+			redirect('index.php/login');
+		
 		}
 	}
 
@@ -35,7 +35,7 @@ class Model_login extends CI_Model {
 		$username = $this->session->userdata('username');
 		if(empty($username)){
 			$this->session->sess_destroy();
-			redirect('login');
+			redirect('index.php/login');
 		}
 	}
 

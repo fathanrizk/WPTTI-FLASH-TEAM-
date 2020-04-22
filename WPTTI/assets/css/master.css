@@ -1,21 +1,21 @@
-.navi{
+.nav{
   padding-top: 20px;
   padding-left: 54px;
   padding-right: 47px;
   padding-bottom: 20px;
 }
-.navi ul{
+.nav ul{
   margin: auto;
   background: #bfa045;
   overflow: hidden;
 }
-.navi ul li{
+.nav ul li{
   float: right;
   list-style-type: none;
   padding: 10px;
   color:black;
 }
-.navi ul li a{
+.nav ul li a{
   color: white;
   display: block;
   font-weight: lighter;
@@ -23,10 +23,10 @@
   text-decoration: none;
   position:relative;
 }
-.navi ul li a:hover{
+.nav ul li a:hover{
   color: #0487c0;
 }
-.navi img{
+.nav img{
   width: 40px;
   float: left;
 }
@@ -43,7 +43,7 @@ h1{
   color: black;
   font-weight: lighter;
 }
-.container1{
+.container{
   background-color: white;
   width: 280px;
   position: absolute;
@@ -54,11 +54,6 @@ h1{
   border: 1px solid #ececec;
   border-radius: 0.5rem;
   box-shadow: 13px 12px 23px #ececec;
-}
-.container2 .alert-success {
-  color: #006249;
-  background-color: #ccf2e8;
-  border-color: #b8ecdf;
 }
 .container2{
   background-color: white;
@@ -92,7 +87,7 @@ h1{
   background: none;
   margin: 0 10px;
 }
-.container1 .button{
+.container .button{
   color: white;
   width: 30%;
   background-color: black;
@@ -103,7 +98,7 @@ h1{
   padding: 5px;
   cursor: pointer;
 }
-.container1 .button:hover{
+.container .button:hover{
   background-color: #0487c0;
   color: white;
 }
