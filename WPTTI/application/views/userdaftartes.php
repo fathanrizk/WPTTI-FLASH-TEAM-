@@ -25,29 +25,31 @@
       <div class="container">
         <p>Use your latest and valid data!</p>
          <?php echo form_open_multipart('userdaftartes'); ?>
-            <div class="data">
-                <p>Name :</p>
-                <input type="text" size ="25" name="nama"><br>
+            <div class="data1">
+                <p>Name </p>
+                <input class="nama" type="text" size ="40" name="nama"><br>
             </div>
-            <div class="data">
-              <p>Place & Date of Birth :</p>
-              <input type="text" size ="25" name="ttl"><br>
+            <div class="data1">
+              <p>Place & Date of Birth </p>
+              <input class="ttl" type="text" size ="40" name="ttl"><br>
             </div>
-            <div class="data">
-                <p>NIM :                    </p>
-                <input type="text" size ="25" name="nim"><br>
+            <div class="data1">
+                <p>NIM  </p>
+                <input class="nim" type="text" size ="40" name="nim"><br>
             </div>
-            <div class="data">
-                <p>Major (Optional) : </p>
-                <input type="text" size ="25" name="prodi"><br>
+            <div class="data1">
+                <p>Major (Optional)  </p>
+                <input class="prodi" type="text" size ="40" name="prodi"><br>
             </div>
-            <div class="data">
-                <p>Upload Photo : </p>
-                <input type="file" name="foto"><br>
+            <div class="data1">
+                <p>Upload Photo  </p>
+                <input class="foto" type="file" name="foto"><br>
             </div>
-            <input class="button" type="submit" name="" value="Submit">
+            <input class="button1" type="submit" name="" value="Submit">
           <?php echo form_close(); ?>
       </div>
+      <br>
+      <br>
     </div>
   </body>
 </html>

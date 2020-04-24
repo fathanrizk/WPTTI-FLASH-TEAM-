@@ -181,13 +181,63 @@
   font-size: 12px;
 }
 .container{
-  width: 100px;
+  width: 40%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
-.main form{
-  margin-top: 20px;
-  margin-left: 75%;
+.container .data1{
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  font-size: 14px;
 }
-.main .pencarian{
+.container .button1{
+  color: white;
+  width: 20%;
+  background-color: #bfa045;
+  border: 1px solid #bfa045;
+  float: right;
+  padding: 5px;
+  margin-right: 1.7rem;
+  cursor: pointer;
+  font-size: 12px;
+}
+.container .button1:hover{
+  background-color: #0487c0;
+  color: white;
+}
+.data1 input{
+  border: none;
+  outline: none;
+  background: none;
+  margin: 0 10px;
+  border-bottom: 1px solid #bfa045;
+}
+.data1 .nama{
+  margin-left: 6.3rem;
+}
+.data1 .nim{
+  margin-left: 6.9rem;
+}
+.data1 .prodi{
+  margin-left: 2.3rem;
+}
+.data1 .foto{
+  margin-left: 3.4rem;
+  border-bottom: none;
+}
+.data1 p{
+  float: left;
+  margin-right: 1rem;
+}
+.cari{
+  float: right;
+  margin-right: 4rem;
+}
+.cari .pencarian{
   width: 12.4rem;
   height: 1.7rem;
   border: none;
@@ -195,11 +245,10 @@
   outline: none;
   background: none;
   overflow: hidden;
-  padding-left: 5px;
   font-size: 12px;
   text-decoration: none;
 }
-.main .button{
+.cari .button{
   margin: auto;
   height: 1.7rem;
   border: none;
@@ -207,11 +256,11 @@
   overflow: hidden;
   outline: none;
   color: white;
-  width: 20%;
   background-color: #bfa045;
   cursor: pointer;
   font-size: 12px;
-  padding-left: 5px;
+  margin-left: 2px;
+  float: right;
 }
 .main .button:hover{
   background-color: #0487c0;
@@ -221,7 +270,9 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-
+.export{
+  float: right;
+}
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -716,14 +767,6 @@ pre code {
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -2941,6 +2984,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #bfa042;
   border-color: #bfa042;
+  text-decoration: none;
 }
 
 .btn-primary:hover {

@@ -18,14 +18,17 @@
     </div>
     <div class="main">
       <h2>Registrant Account Information</h2>
-      <?php echo form_open('Adminberanda/search') ?>
-        <input class="pencarian" type="text" name="keyword">
-        <input class="button" type="submit" name="" value="cari"><br><br>
-      <?php echo form_close() ?>
-      <a class="btn btn-success" href="<?= base_url('adminberanda/eksport_excel')?>">Export Excel</a>
+      <div class="cari">
+        <?php echo form_open('Adminberanda/search') ?>
+          <input class="pencarian" type="text" name="keyword">
+          <input class="button" type="submit" name="" value="Search">
+        <?php echo form_close() ?>
+      </div>
       <br>
       <br>
+      <center><a class="btn btn-success" href="<?= base_url('adminberanda/eksport_excel')?>">Export Excel</a></center>
       <!-- DISINI ISINYA LIST AKUN, FUNGSI HAPUS AKUN, INPUT SOCRE-->
+      <br>
       <div align="center" style="padding-bottom: 3rem; ">
         <table style="max-width: 90%;" class="table table-hover table-bordered table-secondary">
           <thead style="background-color: #b49040; text-align: center;">
