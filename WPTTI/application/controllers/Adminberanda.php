@@ -10,13 +10,17 @@ class Adminberanda extends CI_Controller {
 
 	public function index(){
 		$data = array('data_user' => $this->user_model->tampildata());
+		$this->load->view('adminheader');
 		$this->load->view('adminberanda',$data);
+		$this->load->view('footer');
 	}
 
 	public function edit($id){
 		$where = array('id_user' => $id);
 		$data = array('data_user' => $this->user_model->editdata($where));
+		$this->load->view('adminheader');
 		$this->load->view('adminedit',$data);
+		$this->load->view('footer');
 	}
 
 	public function fungsiedit(){
@@ -30,9 +34,7 @@ class Adminberanda extends CI_Controller {
 		$this->user_model->update($where, $data, 'registrasi');
 		redirect('adminberanda');
 	}
-
-		public function hapus($id){
-
+	public function hapus($id){
 		$where=array('id_user'=>$id);
 		$this->user_model->hapus($where,'registrasi');
 		redirect('adminberanda');
@@ -97,7 +99,9 @@ class Adminberanda extends CI_Controller {
 	public function search(){
 		$keyword = $this->input->post('keyword');
 		$data = array('data_user' => $this->user_model->get_keyword($keyword));
+		$this->load->view('adminheader');
 		$this->load->view('adminberanda',$data);
+		$this->load->view('footer');
 	}
 
 	/*public function logout(){

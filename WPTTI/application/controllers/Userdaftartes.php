@@ -12,8 +12,10 @@ class Userdaftartes extends CI_Controller {
 
     	if($this->form_validation->run() == FALSE)
     	{
-        	$this->load->view('userdaftartes');
-    	} else {
+				$this->load->view('userheader');
+      	$this->load->view('userdaftartes');
+				$this->load->view('footer');
+    	}else {
 
         $data['nama'] = $this->input->post['nama'];
         $data['ttl'] = $this->input->post['ttl'];
@@ -38,12 +40,8 @@ class Userdaftartes extends CI_Controller {
             'prodi' => $this->input->post('prodi'),
             'foto' => $data['foto']
         );
-
-
         $this->load->model('user_model');
-
         $this->user_model->daftartes($data);
-
         redirect('userberanda');
     }
 }

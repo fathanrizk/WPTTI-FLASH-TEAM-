@@ -26,7 +26,7 @@ class user_model extends CI_Model {
 	//fungsi daftar tes
 	public function daftartes($data)
 	{
-		
+
 
 		return $this->db->insert('registrasi', $data);
 	}
@@ -82,7 +82,5 @@ class user_model extends CI_Model {
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
-
-
 }
  ?>

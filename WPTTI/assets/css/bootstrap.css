@@ -273,6 +273,19 @@
 .export{
   float: right;
 }
+footer{
+  padding-left: 45px;
+  padding-right: 45px;
+}
+footer ul{
+  background: #bfa045;
+}
+footer ul p{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+}
 html {
   font-family: sans-serif;
   line-height: 1.15;
