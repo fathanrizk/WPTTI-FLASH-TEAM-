@@ -4,7 +4,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Model_login extends CI_Model {
 	public function ambillogin($username,$password)
 	{
-		$this->db->where('username', $username);
+		$user = $this->db->get_where('user', ['username' => $username])->row_array();
+
+		if ($user) {
+			if (password_verify($password, $user['password'])) {
+				$data = [
+					'username' => $user['username'],
+					'level' => $user['level']
+				];
+				$this->session->set_userdata($data);
+				if ($user['level'] == 2) {
+					redirect('adminberanda');
+				}else {
+					redirect('userberanda');
+				}
+
+			}else {
+				$this->session->set_flashdata('wrong_password', 'Wrong password!');
+				redirect('login');
+			}
+		}else {
+			$this->session->set_flashdata('user_unknown', 'This username is not registered!');
+			redirect('login');
+		}
+		/*$this->db->where('username', $username);
 		$this->db->where('password', $password);
 		$query = $this->db->get('user');
 		if($query->num_rows() > 0){
@@ -16,9 +39,6 @@ class Model_login extends CI_Model {
 			//}else{
 			//	redirect('index.php/userberanda');
 			//}
-
-
-
 			}
 			$this->session->get_userdata($sess);
 
@@ -27,12 +47,12 @@ class Model_login extends CI_Model {
 			$this->session->set_flashdata('info','Sorry, Your Username and Password are incorrect !
 			 Please Try Again.');
 			redirect('login');
-
 		}
+		*/
 	}
 
 	public function security(){
-		$username = $this->session->userdata('username');
+		$username = $this->session->unset_userdata('username');
 		if(empty($username)){
 			$this->session->sess_destroy();
 			redirect('login');

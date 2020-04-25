@@ -8,14 +8,11 @@ class user_model extends CI_Model {
 	{
 		$data = array(
 			'username' => $this->input->post('username'),
-			'password' => $this->input->post('password'),
+			'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
 			'nim' => $this->input->post('nim'),
 			'email' => $this->input->post('email'),
 			'kontak' => $this->input->post('kontak')
-
-
 		);
-
 		return $this->db->insert('user', $data);
 	}
 
@@ -26,8 +23,6 @@ class user_model extends CI_Model {
 	//fungsi daftar tes
 	public function daftartes($data)
 	{
-
-
 		return $this->db->insert('registrasi', $data);
 	}
 

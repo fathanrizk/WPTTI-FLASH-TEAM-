@@ -25,15 +25,23 @@
       <?php if($this->session->flashdata('user_registered')): ?>
         <?php echo '<br><p class = "alert alert-success">' .$this->session->flashdata('user_registered').'</p><br>'; ?>
       <?php endif; ?>
-      <form class="" action="<?php echo site_url('login/ceklogin')?>" method="post">
+      <?php if ($this->session->flashdata('user_unknown')): ?>
+        <?php echo '<br><p class = "alert alert-danger">' .$this->session->flashdata('user_unknown').'</p><br>'; ?>
+      <?php endif; ?>
+      <?php if ($this->session->flashdata('wrong_password')): ?>
+        <?php echo '<br><p class = "alert alert-danger">' .$this->session->flashdata('wrong_password').'</p><br>'; ?>
+      <?php endif; ?>
+      <form class="" action="<?php echo site_url('login')?>" method="post">
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/account.png" alt="">
-            <input type="text" name="username" placeholder="Username"><br>
+            <input type="text" name="username" placeholder="Username" value="<?= set_value('username');?>"><br>
         </div>
+        <small class="text-danger"><?= form_error('username'); ?></small>
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/password.png" alt="">
             <input type="password" name="password" placeholder="Password"><br>
         </div>
+        <small class="text-danger"><?= form_error('password'); ?></small>
         <div style="color: red;font-family:'Open Sans',sans-serif;font-size: 13px;">
           <?php
             $info = $this->session->flashdata('info');

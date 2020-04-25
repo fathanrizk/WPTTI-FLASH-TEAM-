@@ -11,7 +11,7 @@ class Signup extends CI_Controller {
 	public function index()
 	{
 		$this->form_validation->set_rules('username' , 'Username', 'required|callback_check_username_exists');
-		$this->form_validation->set_rules('password' , 'Password', 'required');
+		$this->form_validation->set_rules('password' , 'Password', 'required|min_length[8]');
 		$this->form_validation->set_rules('nim' , 'NIM', 'required');
 		$this->form_validation->set_rules('email' , 'Email', 'required|valid_email|is_unique[user.email]', ['is_unique' => 'This email has already registered!']);
 		$this->form_validation->set_rules('kontak' , 'Kontak Pribadi', 'required');
