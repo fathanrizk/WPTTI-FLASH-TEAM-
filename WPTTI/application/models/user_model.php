@@ -13,6 +13,7 @@ class user_model extends CI_Model {
 			'email' => $this->input->post('email'),
 			'kontak' => $this->input->post('kontak')
 
+
 		);
 
 		return $this->db->insert('user', $data);
@@ -23,16 +24,21 @@ class user_model extends CI_Model {
 	}
 
 	//fungsi daftar tes
-	public function daftartes()
+	public function daftartes($data)
 	{
-		$data = array(
-			'nama' => $this->input->post('nama'),
-			'ttl' => $this->input->post('ttl'),
-			'nim' => $this->input->post('nim'),
-			'prodi' => $this->input->post('prodi')
-		);
+
 
 		return $this->db->insert('registrasi', $data);
+	}
+
+	public function get_keyword($keyword){
+		$this->db->select('*');
+		$this->db->from('registrasi');
+		$this->db->like('nama',$keyword);
+		$this->db->or_like('nim',$keyword);
+		$this->db->or_like('ttl',$keyword);
+		$this->db->or_like('prodi',$keyword);
+		return $this->db->get()->result();
 	}
 
 	public function tampildata()
@@ -76,7 +82,5 @@ class user_model extends CI_Model {
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
-
-
 }
  ?>

@@ -4,7 +4,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"> -->
     <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/bootstrap.css" type="text/css">
     <!-- <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/darkly/bootstrap.min.css"> -->
-    <title>TOEFL | Institut Teknologi Sumatera</title>
+    <title>TOEFL | Intitut Teknologi Sumatera</title>
 
   </head>
   <body>
@@ -12,11 +12,11 @@
       <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>TOEFL ITERA</h1>
         <ul>
-          <li><a href="<?php echo base_url('login'); ?>" style="padding-right: 0.5rem;">Login</a></li>
+          <li><a href="<?= base_url('login')?>" style="padding-right: 0.5rem;">Login</a></li>
           <li><a href="<?= base_url('kontak');?>" style="padding-right: 0.5rem;">Contact Information</a></li>
           <li><a href="<?= base_url('beranda');?>" style="padding-right: 0.5rem;">Homepage</a></li>
         </ul>
-      </div>
+    </div>
       <div class="main">
         <h2>Main Homepage<br>
            ITERA TOEFL Test Registration
@@ -29,10 +29,9 @@
           </p>
         </center>
 
-        <a href="<?= base_url('login');?>">
-         <button type="button" class="btn btn-lg btn-primary " style="margin-left:auto; margin-right:auto; display: block;">Register Now !
-         </button>
-        </a>
+        <center><a style="text-decoration: none;" href="<?= base_url('login');?>">
+         <button type="button" class="btn btn-lg btn-primary" style="display: block;">Register Now !</button>
+        </a></center>
 
          <div id="myCarousel" class="carousel slide" data-ride="carousel" >
          <!-- Indicators -->
@@ -54,6 +53,5 @@
            </div>
          </div>
        </div>
+       <br>
       </div>
-  </body>
-</html>
