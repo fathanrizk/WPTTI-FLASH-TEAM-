@@ -1469,6 +1469,10 @@ pre code {
         -ms-flex: 0 0 33.3333333333%;
             flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
+    margin-top: 1rem;
+  }
+  .col-md-4 img{
+    margin-left: 3rem;
   }
   .col-md-5 {
     -webkit-box-flex: 0;

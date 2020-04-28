@@ -1,7 +1,7 @@
     <div class="main">
       <h2><center>Your Profile</center></h2>
       <?php foreach ($join as $joins) { ?>
-      <td><a class="btn btn-success" href="<?= base_url('userprofile/print/').$joins['nik'];?>"><i class="fa fa-print"></i>Print</a></td>
+      <td><a class="btn btn-success" style="margin-left:23%; margin-top:1rem;"href="<?= base_url('userprofile/print/').$joins['nik'];?>"><i class="fa fa-print"></i>Print</a></td>
       <div class="card mb-3" style="max-width: 500px;">
         <div class="card-title"><h5 align="center" style="font-size:18px;">TOEFL EXAMINATION CARD</h5>
         <p align="center" style="font-size:12px;"><i>INSTITUT TEKNOLOGI SUMATERA</i></p></div>
