@@ -6,8 +6,6 @@ class Userdaftartes extends CI_Controller {
 	{
 			$this->form_validation->set_rules('nama','nama','required');
     	$this->form_validation->set_rules('ttl','ttl','required');
-    	$this->form_validation->set_rules('nim','nim','required');
-			$this->form_validation->set_rules('prodi','prodi','required');
 			$this->form_validation->set_rules('nik','nik','required');
 
     	if($this->form_validation->run() == FALSE)
@@ -24,7 +22,7 @@ class Userdaftartes extends CI_Controller {
         $data['foto'] = $_FILES['foto'];
         if($data['foto']=''){}else{
             $config['upload_path'] = "./assets/foto";
-            $config['allowed_types'] = 'jpg|png';
+            $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload',$config);
             if(!$this->upload->do_upload('foto')){
