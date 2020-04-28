@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2020 at 07:46 PM
+-- Generation Time: Apr 28, 2020 at 05:49 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.2.24
 
@@ -32,12 +32,12 @@ CREATE TABLE `registrasi` (
   `id_registrasi` int(11) NOT NULL,
   `nama` varchar(30) CHARACTER SET latin1 NOT NULL,
   `ttl` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `no_registrasi` int(30) NOT NULL,
-  `nim` int(20) NOT NULL,
-  `prodi` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `no_registrasi` varchar(30) NOT NULL DEFAULT '-',
+  `nim` varchar(20) DEFAULT '-',
+  `prodi` varchar(30) CHARACTER SET latin1 DEFAULT '-',
   `score` int(10) NOT NULL,
   `foto` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `nik` int(30) NOT NULL
+  `nik` bigint(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -47,14 +47,21 @@ CREATE TABLE `registrasi` (
 --
 
 CREATE TABLE `user` (
-  `nik` int(30) NOT NULL,
+  `nik` bigint(30) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `prodi` varchar(50) NOT NULL,
-  `kontak` int(15) NOT NULL,
+  `kontak` bigint(15) NOT NULL,
   `level` int(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`nik`, `username`, `password`, `email`, `kontak`, `level`) VALUES
+(1805272408990001, 'leoviranda', '$2y$10$VjsCsY.D0eyxPnNl/MHYjODhE/zDfVqUnM7hSnLpT2vv31qY4XLu2', 'leo.viranda24@gmail.com', 82306803517, 1),
+(111111111111111111, 'admin', '$2y$10$jLHAlYIP57YqJZSJ5HqGYu.bVd2nIruGf6Hk7uRXZ5vFgfgqRDMIy', 'leo.14117167@student.itera.ac.id', 82306803517, 2);
 
 --
 -- Indexes for dumped tables
@@ -81,7 +88,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `registrasi`
 --
 ALTER TABLE `registrasi`
-  MODIFY `id_registrasi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_registrasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
