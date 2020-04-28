@@ -12,5 +12,11 @@ class Userprofile extends CI_Controller {
 		$this->load->view('userprofile', $data);
 		$this->load->view('footer');
 	}
+	public function print($id)
+	{
+		$id = $this->session->userdata('nik');
+		$data['join'] = $this->user_model->join($id);
+		$this->load->view('usercetak',$data);
+	}
 }
 ?>

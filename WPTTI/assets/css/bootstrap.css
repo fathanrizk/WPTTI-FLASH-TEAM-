@@ -277,6 +277,14 @@
 .export{
   float: right;
 }
+.cetak{
+  padding: 2cm;
+  width: 21cm;
+  height: 29.7cm;
+  margin: auto;
+  background-color: white;
+  border: solid thin #EEE;
+}
 footer{
   padding-left: 45px;
   padding-right: 45px;
