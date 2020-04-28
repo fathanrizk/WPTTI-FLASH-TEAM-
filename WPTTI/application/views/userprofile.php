@@ -1,27 +1,24 @@
     <div class="main">
       <h2><center>Your Profile</center></h2>
-      <div class="card mb-3" style="max-width: 540px;">
+      <?php foreach ($join as $joins) { ?>
+      <div class="card mb-3" style="max-width: 500px;">
+        <div class="card-title"><h5 align="center" style="font-size:18px;">TOEFL EXAMINATION CARD</h5>
+        <p align="center" style="font-size:12px;"><i>INSTITUT TEKNOLOGI SUMATERA</i></p></div>
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="<?= base_url('assets/foto/').$user['foto']; ?>" class="card-img">
-          </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="<?= $user['username']; ?>"></h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text" style="font-size:12px;">Reg. Number &emsp;&emsp;&emsp;: <?= $joins['no_registrasi']; ?></p>
+              <p class="card-text" style="font-size:12px;">NIK &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?= $joins['nik']; ?></p>
+              <p class="card-text" style="font-size:12px;">Name &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  : <?= $joins['nama'];  ?></p>
+              <p class="card-text" style="font-size:12px;">Date of Birth &emsp;&emsp;&emsp; : <?= $joins['ttl'];  ?></p>
+              <p class="card-text" style="font-size:12px;">NIM (optional)&emsp;&emsp;&ensp; : <?= $joins['nim'];  ?></p>
+              <p class="card-text" style="font-size:12px;">Major (optional)&emsp;&emsp;: <?= $joins['prodi'];  ?></p>
             </div>
+          </div>
+          <div class="col-md-4">
+            <img src="<?= $joins['foto'] ?>" class="card-img" alt="">
           </div>
         </div>
       </div>
-      <p style="padding-left: 3rem;padding-top: 2rem;padding-bottom: 1.5rem;">
-          Name                  : <br>
-          Place, Date of Birth  : <br>
-          Registration Number   : <br>
-          NIM                   : <br>
-          Major ( if any )      : <br>
-          Numbered of Test      : <br>
-          Test Score            : <br>
-      </p>
-
+    <?php } ?>
     </div>

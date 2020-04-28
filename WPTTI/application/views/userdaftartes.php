@@ -1,8 +1,11 @@
     <div class="main">
       <h2>TOEFL Test Registration</h2>
       <div class="container">
-        <p>Use your latest and valid data!</p>
+        <h3>Use your latest and valid data!</h3><br>
          <?php echo form_open_multipart('userdaftartes'); ?>
+            <div class="data1">
+                <p>NIK </p><input class="nik" type="text" size ="40" name="nik" value="<?= ($user['nik']);?>">
+            </div>
             <div class="data1">
                 <p>Name </p>
                 <input class="nama" type="text" size ="40" name="nama"><br>
@@ -12,7 +15,7 @@
               <input class="ttl" type="text" size ="40" name="ttl"><br>
             </div>
             <div class="data1">
-                <p>NIM  </p>
+                <p>NIM (Optional) </p>
                 <input class="nim" type="text" size ="40" name="nim"><br>
             </div>
             <div class="data1">

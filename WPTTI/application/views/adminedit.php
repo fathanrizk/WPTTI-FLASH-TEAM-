@@ -29,7 +29,7 @@
                   <td><?php echo $user->nim; ?></td>
                   <td><?php echo $user->prodi; ?></td>
                   <td><input type="text" name="score" value="<?= $user->score  ?>"></td>
-                  <input type="hidden" name="id_user" value="<?php echo $user->id_user; ?>">
+                  <input type="hidden" name="id_user" value="<?php echo $user->id_registrasi; ?>">
                   <td><input type="submit" name="" value="Save"></td> <!--<a class="btn btn-danger"><i class="fa fa-print" type="submit"></i>Simpan</a></td>-->
                 </tr>
                 <?php } ?>

@@ -9,6 +9,7 @@ class Model_login extends CI_Model {
 		if ($user) {
 			if (password_verify($password, $user['password'])) {
 				$data = [
+					'nik' => $user['nik'],
 					'username' => $user['username'],
 					'level' => $user['level']
 				];
@@ -52,13 +53,15 @@ class Model_login extends CI_Model {
 	}
 
 	public function security(){
-		$username = $this->session->unset_userdata('username');
-		if(empty($username)){
-			$this->session->sess_destroy();
-			redirect('login');
+		$this->session->unset_userdata('nik');
+		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('password');
+		$this->session->unset_userdata('email');
+		$this->session->unset_userdata('kontak');
+		$this->session->unset_userdata('level');
+
+		$this->session->set_flashdata('sukses', 'Anda berhasil logout!');
+		redirect('login');
 		}
 	}
-
-
-}
  ?>

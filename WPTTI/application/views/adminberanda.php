@@ -39,8 +39,8 @@
                   <td><?php echo $user->nim; ?></td>
                   <td><?php echo $user->prodi; ?></td>
                   <td><?php echo $user->score; ?></td>
-                  <td><a class="btn btn-danger" href="<?= base_url('adminberanda/edit/').$user->id_user;?>"><i class="fa fa-print"></i>Edit</a></td>
-                  <td><a class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');" href="<?= base_url('adminberanda/hapus/').$user->id_user;?>"><i class="fa fa-print"></i>Hapus</a></td>
+                  <td><a class="btn btn-danger" href="<?= base_url('adminberanda/edit/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Edit</a></td>
+                  <td><a class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');" href="<?= base_url('adminberanda/hapus/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Hapus</a></td>
                 </tr>
                 <?php $no++; ?>
                 <?php } ?>

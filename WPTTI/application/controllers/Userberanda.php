@@ -10,7 +10,7 @@ class Userberanda extends CI_Controller {
 	}
 
 	public function logout(){
-		$this->session->set_userdata('username', FALSE);
+		$this->session->unset_userdata('username', FALSE);
 		$this->session->sess_destroy();
 		redirect('beranda');
 	}

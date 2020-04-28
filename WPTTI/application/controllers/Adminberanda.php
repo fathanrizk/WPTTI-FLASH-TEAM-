@@ -16,7 +16,7 @@ class Adminberanda extends CI_Controller {
 	}
 
 	public function edit($id){
-		$where = array('id_user' => $id);
+		$where = array('id_registrasi' => $id);
 		$data = array('data_user' => $this->user_model->editdata($where));
 		$this->load->view('adminheader');
 		$this->load->view('adminedit',$data);
@@ -24,18 +24,18 @@ class Adminberanda extends CI_Controller {
 	}
 
 	public function fungsiedit(){
-		$id_user = $this->input->post('id_user');
+		$id_registrasi = $this->input->post('$id_registrasi');
 		$no_register = $this->input->post('no_registrasi');
 		$score = $this->input->post('score');
 
 		$data = array('no_registrasi' => $no_register, 'score' => $score);
-		$where = array('id_user' => $id_user);
+		$where = array('id_registrasi' => $id_registrasi);
 
 		$this->user_model->update($where, $data, 'registrasi');
 		redirect('adminberanda');
 	}
 	public function hapus($id){
-		$where=array('id_user'=>$id);
+		$where=array('id_registrasi'=>$id);
 		$this->user_model->hapus($where,'registrasi');
 		redirect('adminberanda');
 	}
@@ -58,24 +58,26 @@ class Adminberanda extends CI_Controller {
 		$obJPHPExcel->setActiveSheetIndex(0);
 
 		$obJPHPExcel->getActiveSheet()->SetCellValue('A1','No');
-		$obJPHPExcel->getActiveSheet()->SetCellValue('B1','Name');
-		$obJPHPExcel->getActiveSheet()->SetCellValue('C1','Place and Date Birth');
-		$obJPHPExcel->getActiveSheet()->SetCellValue('D1','Registration Number');
-		$obJPHPExcel->getActiveSheet()->SetCellValue('E1','NIM');
-		$obJPHPExcel->getActiveSheet()->SetCellValue('F1','Major Field Study');
-		$obJPHPExcel->getActiveSheet()->SetCellValue('G1','Score');
+		$obJPHPExcel->getActiveSheet()->SetCellValue('B1','NIK');
+		$obJPHPExcel->getActiveSheet()->SetCellValue('C1','Name');
+		$obJPHPExcel->getActiveSheet()->SetCellValue('D1','Place and Date Birth');
+		$obJPHPExcel->getActiveSheet()->SetCellValue('E1','Registration Number');
+		$obJPHPExcel->getActiveSheet()->SetCellValue('F1','NIM');
+		$obJPHPExcel->getActiveSheet()->SetCellValue('G1','Major Field Study');
+		$obJPHPExcel->getActiveSheet()->SetCellValue('H1','Score');
 
 		$baris=2;
 		$x=1;
 
 		foreach ($data['user_data'] as $data) {
 			$obJPHPExcel->getActiveSheet()->SetCellValue('A'.$baris, $x);
-			$obJPHPExcel->getActiveSheet()->SetCellValue('B'.$baris, $data->nama);
-			$obJPHPExcel->getActiveSheet()->SetCellValue('c'.$baris, $data->ttl);
-			$obJPHPExcel->getActiveSheet()->SetCellValue('D'.$baris, $data->no_registrasi);
-			$obJPHPExcel->getActiveSheet()->SetCellValue('E'.$baris, $data->nim);
-			$obJPHPExcel->getActiveSheet()->SetCellValue('F'.$baris, $data->prodi);
-			$obJPHPExcel->getActiveSheet()->SetCellValue('G'.$baris, $data->score);
+			$obJPHPExcel->getActiveSheet()->SetCellValue('B'.$baris, $data->nik);
+			$obJPHPExcel->getActiveSheet()->SetCellValue('C'.$baris, $data->nama);
+			$obJPHPExcel->getActiveSheet()->SetCellValue('D'.$baris, $data->ttl);
+			$obJPHPExcel->getActiveSheet()->SetCellValue('E'.$baris, $data->no_registrasi);
+			$obJPHPExcel->getActiveSheet()->SetCellValue('F'.$baris, $data->nim);
+			$obJPHPExcel->getActiveSheet()->SetCellValue('G'.$baris, $data->prodi);
+			$obJPHPExcel->getActiveSheet()->SetCellValue('H'.$baris, $data->score);
 
 			$x++;
 			$baris++;

@@ -36,8 +36,9 @@ class Login extends CI_Controller {
 		}else{
 			redirect('userberanda');
 		}*/
-
-
+	}
+	public function logout(){
+		$this->model_login->security();
 	}
 }
 

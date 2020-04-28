@@ -25,6 +25,11 @@
       <form class="" action="<?= base_url('signup')  ?>" method="post">
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/account.png" alt="">
+            <input type="text" name="nik" placeholder="NIK"><br>
+        </div>
+        <small class="text-danger"><?= form_error('nik'); ?></small>
+        <div class="data">
+            <img src="<?php echo base_url() ?>/assets/img/account.png" alt="">
             <input type="text" name="username" placeholder="Username"><br>
         </div>
         <small class="text-danger"><?= form_error('username'); ?></small>
@@ -33,11 +38,6 @@
             <input type="password" name="password" placeholder="Password"><br>
         </div>
         <small class="text-danger"><?= form_error('password'); ?></small>
-        <div class="data">
-            <img src="<?php echo base_url() ?>/assets/img/nim.png" alt="">
-            <input type="text" name="nim" placeholder="NIM"><br>
-        </div>
-        <small class="text-danger"><?= form_error('nim'); ?></small>
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/email.png" alt="">
             <input type="text" name="email" placeholder="Email"><br>

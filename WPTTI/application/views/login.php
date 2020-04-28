@@ -31,6 +31,9 @@
       <?php if ($this->session->flashdata('wrong_password')): ?>
         <?php echo '<br><p class = "alert alert-danger">' .$this->session->flashdata('wrong_password').'</p><br>'; ?>
       <?php endif; ?>
+      <?php if ($this->session->flashdata('sukses')): ?>
+        <?php echo '<br><p class = "alert alert-success">' .$this->session->flashdata('sukses').'</p><br>'; ?>
+      <?php endif; ?>
       <form class="" action="<?php echo site_url('login')?>" method="post">
         <div class="data">
             <img src="<?php echo base_url() ?>/assets/img/account.png" alt="">

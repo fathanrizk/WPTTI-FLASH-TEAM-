@@ -7,18 +7,20 @@ class user_model extends CI_Model {
 	public function register()
 	{
 		$data = array(
+			'nik' => $this->input->post('nik'),
 			'username' => $this->input->post('username'),
 			'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-			'nim' => $this->input->post('nim'),
 			'email' => $this->input->post('email'),
 			'kontak' => $this->input->post('kontak')
 		);
 		return $this->db->insert('user', $data);
 	}
 
+	//fungsi ambil data untuk excel
 	public function data_user(){
 		return $this->db->get('registrasi');
 	}
+
 
 	//fungsi daftar tes
 	public function daftartes($data)
@@ -36,12 +38,14 @@ class user_model extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	//export excel 1
 	public function tampildata()
 	{
-    $query = $this->db->order_by('id_user','ASC')->get('registrasi');
+    $query = $this->db->order_by('id_registrasi','ASC')->get('registrasi');
     return $query->result();
 	}
 
+	//export excel 2
 	public function tampil_data(){
 		return $this->db->get('registrasi');
 	}
@@ -76,10 +80,21 @@ class user_model extends CI_Model {
 			return false;
 		}
 	}
-
+	//fungsi hapus data dari database
 	public function hapus($where,$table){
 		$this->db->where($where);
 		$this->db->delete($table);
+	}
+
+	//fungsi join
+	public function join($id){
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('user.nik', $id);
+		$this->db->join('registrasi', 'user.nik = registrasi.nik');
+		$query = $this->db->get();
+
+		return $query->result_array();
 	}
 }
  ?>
