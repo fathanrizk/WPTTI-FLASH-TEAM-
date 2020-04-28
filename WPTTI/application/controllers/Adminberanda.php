@@ -24,7 +24,7 @@ class Adminberanda extends CI_Controller {
 	}
 
 	public function fungsiedit(){
-		$id_registrasi = $this->input->post('$id_registrasi');
+		$id_registrasi = $this->input->post('id_registrasi');
 		$no_register = $this->input->post('no_registrasi');
 		$score = $this->input->post('score');
 
