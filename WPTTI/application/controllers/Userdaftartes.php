@@ -41,7 +41,7 @@ class Userdaftartes extends CI_Controller {
             'nim' => $this->input->post('nim'),
             'prodi' => $this->input->post('prodi'),
             'foto' => $data['foto'],
-						'nik' => $this->input->post('nik')
+			'nik' => $this->input->post('nik')
         );
         $this->load->model('user_model');
         $this->user_model->daftartes($data);

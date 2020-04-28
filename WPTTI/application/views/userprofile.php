@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <img src="<?= $joins['foto'] ?>" class="card-img" alt="">
+            <img src="<?php echo base_url(); ?>assets/foto/<?php echo $joins['foto'];?>"width="90" height="110">
           </div>
         </div>
       </div>
