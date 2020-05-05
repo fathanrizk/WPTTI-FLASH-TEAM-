@@ -60,7 +60,7 @@ class Model_login extends CI_Model {
 		$this->session->unset_userdata('kontak');
 		$this->session->unset_userdata('level');
 
-		$this->session->set_flashdata('sukses', 'Anda berhasil logout!');
+		$this->session->set_flashdata('sukses', 'You are Loged out!');
 		redirect('login');
 		}
 	}

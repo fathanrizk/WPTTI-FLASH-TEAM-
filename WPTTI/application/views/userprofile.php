@@ -1,4 +1,5 @@
-    <div class="main">
+    <div class="container-fluid">
+      <br>
       <h2><center>Your Profile</center></h2>
       <?php foreach ($join as $joins) { ?>
       <td><a class="btn btn-success" style="margin-left:23%; margin-top:1rem;"href="<?= base_url('userprofile/print/').$joins['nik'];?>"><i class="fa fa-print"></i>Print</a></td>

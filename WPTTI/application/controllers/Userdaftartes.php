@@ -10,10 +10,16 @@ class Userdaftartes extends CI_Controller {
 
     	if($this->form_validation->run() == FALSE)
     	{
-				$this->load->view('userheader');
-				$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-      	$this->load->view('userdaftartes',$data);
-				$this->load->view('footer');
+				if($this->session->level) {
+					$this->load->view('userheader');
+					$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
+	      	$this->load->view('userdaftartes',$data);
+					$this->load->view('footer');
+				} else {
+					$this->session->set_flashdata('wrong_password','Please Login!');
+					redirect('Login');
+				}
+
     	}else {
         $data['nama'] = $this->input->post['nama'];
         $data['ttl'] = $this->input->post['ttl'];

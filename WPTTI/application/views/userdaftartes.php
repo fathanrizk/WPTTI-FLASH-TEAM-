@@ -1,16 +1,16 @@
-    <div class="main">
-      <h2>TOEFL Test Registration</h2>
-      <div class="container">
+    <div class="container-fluid">
+      <br>
+      <img class="d-block w-25" style="float:right;" src="<?php echo base_url() ?>/assets/img/itera/alur.png" alt="">
+      <div class="container2">
         <h3>Use your latest and valid data!</h3>
         <small class="text-danger">*if you're an ITERA students, field "NIM" and "Major" must be filled in!</small>
         <br>
          <?php echo form_open_multipart('userdaftartes'); ?>
-            <div class="data1">
-                <p>NIK </p><input class="nik" type="text" size ="40" name="nik" value="<?= ($user['nik']);?>">
-            </div>
+            <input class="nik" type="hidden" size ="40" name="nik" value="<?= ($user['nik']);?>">
+            
             <div class="data1">
                 <p>Name </p>
-                <input class="nama" type="text" size ="40" name="nama">
+                <input autofocus class="nama" type="text" size ="40" name="nama">
             </div>
             <small class="text-danger"><?= form_error('nama'); ?></small>
             <div class="data1">
@@ -34,6 +34,7 @@
             <input class="button1" type="submit" name="" value="Submit">
           <?php echo form_close(); ?>
       </div>
+      <br>
       <br>
       <br>
     </div>

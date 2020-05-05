@@ -12,7 +12,7 @@
       <img src="<?php echo base_url() ?>/assets/img/itera.png" alt="">
         <h1>TOEFL ITERA</h1>
         <ul>
-          <li><a href="<?= base_url('beranda');?> " style="padding-right: 0.5rem;">Logout</a></li>
+          <li><a href="<?= base_url('login/logout');?> " style="padding-right: 0.5rem;">Logout</a></li>
           <li><a href="<?= base_url('adminberanda');?> " style="padding-right: 0.5rem;">Homepage</a></li>
         </ul>
     </div>

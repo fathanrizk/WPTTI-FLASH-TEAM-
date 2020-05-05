@@ -9,18 +9,28 @@ class Adminberanda extends CI_Controller {
 	}
 
 	public function index(){
-		$data = array('data_user' => $this->user_model->tampildata());
-		$this->load->view('adminheader');
-		$this->load->view('adminberanda',$data);
-		$this->load->view('footer');
+		if($this->session->level) {
+			$data = array('data_user' => $this->user_model->tampildata());
+			$this->load->view('adminheader');
+			$this->load->view('adminberanda',$data);
+			$this->load->view('footer');
+		} else {
+			$this->session->set_flashdata('wrong_password','Please Login!');
+			redirect('Login');
+		}
 	}
 
 	public function edit($id){
-		$where = array('id_registrasi' => $id);
-		$data = array('data_user' => $this->user_model->editdata($where));
-		$this->load->view('adminheader');
-		$this->load->view('adminedit',$data);
-		$this->load->view('footer');
+		if($this->session->level) {
+			$where = array('id_registrasi' => $id);
+			$data = array('data_user' => $this->user_model->editdata($where));
+			$this->load->view('adminheader');
+			$this->load->view('adminedit',$data);
+			$this->load->view('footer');
+		} else {
+			$this->session->set_flashdata('wrong_password','Please Login!');
+			redirect('Login');
+		}
 	}
 
 	public function fungsiedit(){
@@ -99,11 +109,17 @@ class Adminberanda extends CI_Controller {
 	}
 
 	public function search(){
-		$keyword = $this->input->post('keyword');
-		$data = array('data_user' => $this->user_model->get_keyword($keyword));
-		$this->load->view('adminheader');
-		$this->load->view('adminberanda',$data);
-		$this->load->view('footer');
+		if($this->session->level) {
+			$keyword = $this->input->post('keyword');
+			$data = array('data_user' => $this->user_model->get_keyword($keyword));
+			$this->load->view('adminheader');
+			$this->load->view('adminberanda',$data);
+			$this->load->view('footer');
+		} else {
+			$this->session->set_flashdata('wrong_password','Please Login!');
+			redirect('Login');
+		}
+
 	}
 
 	/*public function logout(){

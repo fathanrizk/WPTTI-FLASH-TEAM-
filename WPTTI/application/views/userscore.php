@@ -1,5 +1,6 @@
-    <div class="main">
-      <h2><center>Score Test TOEFL</center></h2>
+    <div class="container-fluid">
+      <br>
+      <br>
       <div class="cari">
         <?php echo form_open('userscore/search') ?>
           <input class="pencarian" type="text" name="keyword">
@@ -10,7 +11,7 @@
       <br>
       <!-- DISINI ISINYA LIST AKUN-->
       <br>
-      <div align="center" style="padding-bottom: 3rem; ">
+      <div class="table-responsive-md" align="center" style="padding-bottom: 3rem; ">
         <table style="max-width: 90%;" class="table table-hover table-bordered table-secondary">
           <thead style="background-color: #b49040; text-align: center;">
             <tr >
@@ -43,4 +44,6 @@
           </tbody>
         </table>
       </div>
+      <br>
+      <br>
     </div>
