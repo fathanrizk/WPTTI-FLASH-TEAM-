@@ -31,8 +31,8 @@
   <br>
   <h2><center>Your Profile</center></h2>
   <?php foreach ($join as $joins) { ?>
-  <td><a class="btn btn-success" style="margin-left:23%; margin-top:1rem;"href="<?= base_url('userprofile/print/').$joins['nik'];?>"><i class="fa fa-print"></i>Print</a></td>
-  <div class="card mb-3" style="max-width: 500px;">
+  <center><a class="btn btn-success" style="margin-top:1rem;"href="<?= base_url('userprofile/print/').$joins['nik'];?>"><i class="fa fa-print"></i>Print</a></center>
+  <div class="card mb-3 mx-auto" style="max-width: 500px;">
     <div class="card-title"><h5 align="center" style="font-size:18px;">TOEFL EXAMINATION CARD</h5>
     <p align="center" style="font-size:12px;"><i>INSTITUT TEKNOLOGI SUMATERA</i></p></div>
     <div class="row no-gutters">
@@ -52,4 +52,29 @@
     </div>
   </div>
 <?php } ?>
+<div class="container2">
+  <h3>HOW TO GET REGISTRATION NUMBER</h3>
+  <small class="text-danger">*If you have not made a payment, please make a payment by
+    selecting one of the virtual accounts below then uploading the payment receipt</small>
+  <br>
+    <?php echo form_open_multipart('userprofile'); ?>
+    <div class="data1">
+        <p>BRI</p>
+        <input disabled class="nik" type="text" size ="40" name="nik" value="78570100533">
+    </div>
+    <div class="data1">
+        <p>BNI</p>
+        <input disabled class="nama" type="text" size ="40" name="nama" value="23434575683">
+    </div>
+    <div class="data1">
+        <p>Upload receipt (.jpg)</p>
+        <input autofocus class="foto" type="file" name="bukti">
+    </div>
+    <small class="text-danger"><?= form_error('bukti'); ?></small>
+    <input class="button1" type="submit" name="" value="Submit">
+    <?php echo form_close(); ?>
+    <br>
+    <br>
+    <br>
+</div>
 </div>
