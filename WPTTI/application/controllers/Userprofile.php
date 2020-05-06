@@ -26,7 +26,8 @@ class Userprofile extends CI_Controller {
 		$this->load->view('usercetak',$data);
 	}
 
-	public function upload_payment(){
+public function upload_payment(){
+		$id_registrasi = $this->input->post('id_registrasi');
 		$data['bukti'] = $_FILES['bukti'];
         if($data['bukti']=''){}else{
             $config['upload_path'] = "./assets/buktibayar";
@@ -39,15 +40,12 @@ class Userprofile extends CI_Controller {
                 $data['bukti'] = $this->upload->data('file_name');
             }
         }
-       $data = array(
-         
-            'bukti' => $data['bukti']
-	
-        );
-		
-        $this->load->model('user_model');
-        $this->user_model->daftartes($data);
-        redirect('userprofile');
+    $data = array('bukti' => $data['payment']);
+		$where = array('id_registrasi' => $id_registrasi);
+
+    $this->load->model('user_model');
+    $this->user_model->uploadbukti($data, $where);
+    redirect('userprofile');
 	}
 }
 ?>
