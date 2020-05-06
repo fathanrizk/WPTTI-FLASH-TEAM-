@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2020 at 05:49 PM
+-- Generation Time: May 06, 2020 at 07:23 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.2.24
 
@@ -37,8 +37,16 @@ CREATE TABLE `registrasi` (
   `prodi` varchar(30) CHARACTER SET latin1 DEFAULT '-',
   `score` int(10) NOT NULL,
   `foto` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `nik` bigint(30) NOT NULL
+  `nik` bigint(30) NOT NULL,
+  `bukti` varchar(50) CHARACTER SET latin1 DEFAULT '-'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `registrasi`
+--
+
+INSERT INTO `registrasi` (`id_registrasi`, `nama`, `ttl`, `no_registrasi`, `nim`, `prodi`, `score`, `foto`, `nik`, `bukti`) VALUES
+(17, 'Leo Viranda Millennium', 'Pardasuka, 24 August 1999', '-', '', '', 0, '20190826_142533.jpg', 1805272408990001, '');
 
 -- --------------------------------------------------------
 
@@ -88,7 +96,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `registrasi`
 --
 ALTER TABLE `registrasi`
-  MODIFY `id_registrasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_registrasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables

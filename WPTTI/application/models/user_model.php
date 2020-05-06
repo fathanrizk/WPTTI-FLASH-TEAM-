@@ -96,5 +96,12 @@ class user_model extends CI_Model {
 
 		return $query->result_array();
 	}
+
+	//fungsi upload bukti
+	public function uploadbukti($where, $data, $table)
+	{
+		$this->db->where($where);
+		$this->db->update($table, $data);
+	}
 }
  ?>

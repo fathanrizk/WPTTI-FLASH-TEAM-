@@ -58,17 +58,16 @@
     selecting one of the virtual accounts below then uploading the payment receipt</small>
   <br>
     <?php echo form_open_multipart('userprofile/upload_payment'); ?>
+    <input type="hidden" size ="40" name="id_registrasi" value="<?= ($joins['id_registrasi']);?>">
     <div class="data1">
-        <p>BRI</p>
-        <input disabled class="bank1" type="text" size ="40" name="bank1" value="78570100533">
+        <p>BRI 78570100533</p>
     </div>
     <div class="data1">
-        <p>BNI</p>
-        <input disabled class="bank2" type="text" size ="40" name="bank2" value="23434575683">
+        <p>BNI 23575433264</p>
     </div>
     <div class="data1">
         <p>Upload receipt (.jpg)</p>
-        <input autofocus class="bukti" type="file" name="bukti">
+        <input class="bukti" type="file" name="bukti">
     </div>
     <small class="text-danger"><?= form_error('bukti'); ?></small>
     <input class="button1" type="submit" name="" value="Submit">
