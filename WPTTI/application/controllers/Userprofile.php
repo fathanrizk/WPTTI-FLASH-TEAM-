@@ -13,28 +13,6 @@ class Userprofile extends CI_Controller {
 				$this->load->view('userheader');
 				$this->load->view('userprofile', $data);
 				$this->load->view('footer');
-                $data['bukti'] = $_FILES['bukti'];
-             if($data['bukti']=''){}else{
-            $config['upload_path'] = "./assets/buktibayar";
-            $config['allowed_types'] = 'jpg|png|jpeg';
-
-            $this->load->library('upload',$config);
-            if(!$this->upload->do_upload('bukti')){
-                echo "Submit Fail.Check FILE TYPE when you upload your PHOTO's !";die();
-            }else{
-                $data['bukti'] = $this->upload->data('file_name');
-            }
-            $data = array(
-        
-            'bukti' => $data['bukti']
-         
-        );
-        $this->load->model('user_model');
-        $this->user_model->daftartes($data);
-        redirect('userprofile');
-        }
-
-
 				} else {
 					$this->session->set_flashdata('wrong_password','Please Login!');
 					redirect('Login');
@@ -48,28 +26,28 @@ class Userprofile extends CI_Controller {
 		$this->load->view('usercetak',$data);
 	}
 
-	/*public function upload_payment(){
-		$data['payment'] = $_FILES['payment'];
-        if($data['payment']=''){}else{
+	public function upload_payment(){
+		$data['bukti'] = $_FILES['bukti'];
+        if($data['bukti']=''){}else{
             $config['upload_path'] = "./assets/buktibayar";
             $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload',$config);
-            if(!$this->upload->do_upload('payment')){
+            if(!$this->upload->do_upload('bukti')){
                 echo "Submit Fail.Check FILE TYPE when you upload your PHOTO's !";die();
             }else{
-                $data['payment'] = $this->upload->data('file_name');
+                $data['bukti'] = $this->upload->data('file_name');
             }
         }
        $data = array(
          
-            'bukti' => $data['payment']
+            'bukti' => $data['bukti']
 	
         );
 		
         $this->load->model('user_model');
         $this->user_model->daftartes($data);
         redirect('userprofile');
-	}*/
+	}
 }
 ?>

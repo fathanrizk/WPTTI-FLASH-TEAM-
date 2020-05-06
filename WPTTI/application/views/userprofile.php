@@ -57,7 +57,7 @@
   <small class="text-danger">*If you have not made a payment, please make a payment by
     selecting one of the virtual accounts below then uploading the payment receipt</small>
   <br>
-    <?php echo form_open_multipart('userprofile'); ?>
+    <?php echo form_open_multipart('userprofile/upload_payment'); ?>
     <div class="data1">
         <p>BRI</p>
         <input disabled class="bank1" type="text" size ="40" name="bank1" value="78570100533">
