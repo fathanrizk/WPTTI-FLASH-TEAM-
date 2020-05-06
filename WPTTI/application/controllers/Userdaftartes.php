@@ -5,7 +5,7 @@ class Userdaftartes extends CI_Controller {
 	public function index()
 	{
 			$this->form_validation->set_rules('nama','nama','required');
-    	$this->form_validation->set_rules('ttl','ttl','required');
+            $this->form_validation->set_rules('ttl','ttl','required');
 			$this->form_validation->set_rules('nik','nik','required');
 
     	if($this->form_validation->run() == FALSE)
@@ -13,7 +13,7 @@ class Userdaftartes extends CI_Controller {
 				if($this->session->level) {
 					$this->load->view('userheader');
 					$data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-	      	$this->load->view('userdaftartes',$data);
+	      	        $this->load->view('userdaftartes',$data);
 					$this->load->view('footer');
 				} else {
 					$this->session->set_flashdata('wrong_password','Please Login!');

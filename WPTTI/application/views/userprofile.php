@@ -60,15 +60,15 @@
     <?php echo form_open_multipart('userprofile'); ?>
     <div class="data1">
         <p>BRI</p>
-        <input disabled class="nik" type="text" size ="40" name="nik" value="78570100533">
+        <input disabled class="bank1" type="text" size ="40" name="bank1" value="78570100533">
     </div>
     <div class="data1">
         <p>BNI</p>
-        <input disabled class="nama" type="text" size ="40" name="nama" value="23434575683">
+        <input disabled class="bank2" type="text" size ="40" name="bank2" value="23434575683">
     </div>
     <div class="data1">
         <p>Upload receipt (.jpg)</p>
-        <input autofocus class="foto" type="file" name="bukti">
+        <input autofocus class="bukti" type="file" name="bukti">
     </div>
     <small class="text-danger"><?= form_error('bukti'); ?></small>
     <input class="button1" type="submit" name="" value="Submit">
