@@ -22,8 +22,7 @@
       </div>-->
     <br>
     <br>
-    <div class="container-fluid">
-        <div class="container1">
+        <div class="container1 mx-auto">
           <h2><center>Login</center></h2>
           <?php if($this->session->flashdata('user_registered')): ?>
             <?php echo '<br><p class = "alert alert-success">' .$this->session->flashdata('user_registered').'</p><br>'; ?>
@@ -63,7 +62,6 @@
             <p>If you don't have an account, please <a href="<?= base_url('signup');?>">register here.</a></p>
           </form>
     <br>
-  </div>
   </div>
   </body>
 </html>

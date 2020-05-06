@@ -24,8 +24,7 @@
     </header>-->
     <br>
     <br>
-    <div class="container-fluid">
-      <div class="container1">
+      <div class="container1 mx-auto">
         <h2><center>Sign Up</center></h2>
         <form class="" action="<?= base_url('signup')  ?>" method="post">
           <div class="data">
@@ -60,6 +59,5 @@
           <p>If you already have an account, please <a href="<?= base_url('login');?>">login here.</a></p>
         </form>
       </div>
-  </div>
   </body>
 </html>
