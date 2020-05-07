@@ -98,10 +98,10 @@ class user_model extends CI_Model {
 	}
 
 	//fungsi upload bukti
-	public function uploadbukti($where, $data, $table)
+	public function uploadbukti($data, $where)
 	{
 		$this->db->where($where);
-		$this->db->update($table, $data);
+		$this->db->update('registrasi', $data);
 	}
 }
  ?>

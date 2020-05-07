@@ -59,6 +59,7 @@
   <br>
     <?php foreach ($join as $joins) { ?>
     <?php echo form_open_multipart('userprofile/upload_payment'); ?>
+    <input type="hidden" size ="40" name="nik" value="<?= ($joins['nik']);?>">
     <input type="hidden" size ="40" name="id_registrasi" value="<?= ($joins['id_registrasi']);?>">
     <div class="data1">
         <p>BRI 78570100533</p>
