@@ -1,10 +1,12 @@
-    <div class="main">
-      <h2>Registrant Account Information</h2>
+    <div class="container-fluid">
+      <center>
+        <h2 style="padding:1rem; border-bottom: 2px solid red;">Registrant Account Information</h2>
+      </center>
       <br>
       <br>
       <!-- DISINI ISINYA LIST AKUN, FUNGSI HAPUS AKUN, INPUT SOCRE-->
 
-      <div align="center" style="padding-bottom: 3rem; ">
+      <div class="table-responsive-md" align="center" style="padding-bottom: 3rem; ">
         <table style="max-width: 90%;" class="table table-hover table-bordered table-secondary">
           <thead style="background-color: #b49040; text-align: center;">
             <tr >
@@ -37,4 +39,6 @@
           </tbody>
         </table>
       </div>
+      <br>
+      <br>
     </div>
