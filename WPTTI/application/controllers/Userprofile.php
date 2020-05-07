@@ -27,7 +27,8 @@ class Userprofile extends CI_Controller {
 	}
 
 public function upload_payment(){
-		$id_registrasi = $this->input->post('id_registrasi');
+		//$id_registrasi = $this->input->post('id_registrasi');
+		$bukti = $this->input->post('bukti');
 		$data['bukti'] = $_FILES['bukti'];
         if($data['bukti']=''){}else{
             $config['upload_path'] = "./assets/buktibayar";
@@ -38,13 +39,15 @@ public function upload_payment(){
                 echo "Submit Fail.Check FILE TYPE when you upload your PHOTO's !";die();
             }else{
                 $data['bukti'] = $this->upload->data('file_name');
+                $where = array('bukti' => $bukti);
             }
         }
-    $data = array('bukti' => $data['payment']);
-		$where = array('id_registrasi' => $id_registrasi);
+    	$data = array('bukti' => $data['bukti']);
+		
 
     $this->load->model('user_model');
-    $this->user_model->uploadbukti($data, $where);
+    //$this->user_model->daftartes($data);
+    //$this->user_model->uploadbukti($data, $where, $bukti);
     redirect('userprofile');
 	}
 }
