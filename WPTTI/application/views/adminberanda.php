@@ -22,7 +22,6 @@
               <th scope="col">NIM</th>
               <th scope="col">Major Field Study</th>
               <th scope="col">Score</th>
-              <th scope="col">bukti bayar</th>
               <th scope="col" colspan="2">Edit Data</th>
             </tr>
           </thead>
@@ -40,7 +39,6 @@
                   <td><?php echo $user->nim; ?></td>
                   <td><?php echo $user->prodi; ?></td>
                   <td><?php echo $user->score; ?></td>
-                  <td><img src="<?php echo base_url(); ?>assets/buktibayar/<?php echo ['bukti'];?>"width="90" height="110"></td>
                   <td><a class="btn btn-danger" href="<?= base_url('adminberanda/edit/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Edit</a></td>
                   <td><a class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');" href="<?= base_url('adminberanda/hapus/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Hapus</a></td>
                 </tr>

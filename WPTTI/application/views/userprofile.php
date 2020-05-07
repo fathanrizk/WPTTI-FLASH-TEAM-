@@ -57,6 +57,7 @@
   <small class="text-danger">*If you have not made a payment, please make a payment by
     selecting one of the virtual accounts below then uploading the payment receipt</small>
   <br>
+    <?php foreach ($join as $joins) { ?>
     <?php echo form_open_multipart('userprofile/upload_payment'); ?>
     <input type="hidden" size ="40" name="id_registrasi" value="<?= ($joins['id_registrasi']);?>">
     <div class="data1">
@@ -72,6 +73,7 @@
     <small class="text-danger"><?= form_error('bukti'); ?></small>
     <input class="button1" type="submit" name="" value="Submit">
     <?php echo form_close(); ?>
+    <?php } ?>
     <br>
     <br>
     <br>
