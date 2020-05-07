@@ -14,12 +14,12 @@
       <div class="row no-gutters">
         <div class="col-md-8">
           <div class="card-body">
-            <p class="card-text" style="font-size:12px;">Reg. Number &emsp;&emsp;&emsp;: <?= $joins['no_registrasi']; ?></p>
-            <p class="card-text" style="font-size:12px;">NIK &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?= $joins['nik']; ?></p>
-            <p class="card-text" style="font-size:12px;">Name &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  : <?= $joins['nama'];  ?></p>
-            <p class="card-text" style="font-size:12px;">Date of Birth &emsp;&emsp;&emsp; : <?= $joins['ttl'];  ?></p>
-            <p class="card-text" style="font-size:12px;">NIM (optional)&emsp;&emsp;&ensp; : <?= $joins['nim'];  ?></p>
-            <p class="card-text" style="font-size:12px;">Major (optional)&emsp;&emsp;: <?= $joins['prodi'];  ?></p>
+            <p class="card-text" style="font-size:12px;">Reg. Number&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?= $joins['no_registrasi']; ?></p>
+          <p class="card-text" style="font-size:12px;">NIK&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: <?= $joins['nik']; ?></p>
+          <p class="card-text" style="font-size:12px;">Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  : <?= $joins['nama'];  ?></p>
+          <p class="card-text" style="font-size:12px;">Place & Date of Birth  &emsp;  &emsp; : <?= $joins['ttl'];  ?></p>
+          <p class="card-text" style="font-size:12px;">NIM (optional)  &emsp; &emsp; &emsp;&emsp;&ensp; : <?= $joins['nim'];  ?></p>
+          <p class="card-text" style="font-size:12px;">Major (optional)&emsp; &emsp; &emsp; &emsp;: <?= $joins['prodi'];  ?></p>
           </div>
         </div>
         <div class="col-md-4">

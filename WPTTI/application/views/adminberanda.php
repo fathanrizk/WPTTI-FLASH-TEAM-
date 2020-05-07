@@ -45,7 +45,7 @@
                   <td>
                   <!-- Button trigger modal -->
                     <a data-toggle="modal" data-target="#exampleModal">
-                      <?php echo $user->bukti ?>
+                      <img src="<?php echo base_url(); ?>assets/buktibayar/<?php echo $user->bukti;?>"width="90" height="110">
                     </a>
 
                     <!-- Modal -->
@@ -70,8 +70,8 @@
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
                     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
                       </td>
-                  <td><a class="btn btn-danger" href="<?= base_url('adminberanda/edit/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Edit</a></td>
-                  <td><a class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');" href="<?= base_url('adminberanda/hapus/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Hapus</a></td>
+                      <td><a class="btn btn-danger" href="<?= base_url('adminberanda/edit/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Edit</a></td>
+                      <td><a class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');" href="<?= base_url('adminberanda/hapus/').$user->id_registrasi;?>"><i class="fa fa-print"></i>Hapus</a></td>
                 </tr>
                 <?php $no++; ?>
                 <?php } ?>
